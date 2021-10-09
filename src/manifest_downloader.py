@@ -5,14 +5,16 @@ import gevent.monkey
 gevent.monkey.patch_socket()
 gevent.monkey.patch_ssl()
 
+import argparse
 import contextlib
 import logging
 import os
 import sqlite3
+import sys
 from datetime import datetime, timezone
 from getpass import getpass
 from types import TracebackType
-from typing import Optional, Type, TypedDict, Union, cast
+from typing import IO, Optional, Type, TypedDict, Union, cast
 
 import yaml
 from steam.client import SteamClient
@@ -44,49 +46,31 @@ class InputManifestsManifest(TypedDict):
 
 
 def main() -> None:
+  parser = argparse.ArgumentParser()
+  subparsers = parser.add_subparsers(required=True, metavar="COMMAND")
 
-  db_connection = sqlite3.connect(os.path.join(PROJECT_DIR, "data", "manifests.sqlite3"))
+  subparser = subparsers.add_parser("update", help="")
+  subparser.set_defaults(func=cmd_update_database)
 
-  with db_connection, contextlib.closing(db_connection.cursor()) as db_cursor:
-    db_cursor.executescript(
-      """
-      CREATE TABLE IF NOT EXISTS manifests (
-        app_id          INTEGER NOT NULL,
-        depot_id        INTEGER NOT NULL,
-        id              INTEGER NOT NULL,
-        creation_time   TEXT    NOT NULL,
-        original_size   INTEGER NOT NULL,
-        compressed_size INTEGER NOT NULL,
-        PRIMARY KEY (depot_id, id)
-      );
-      CREATE TABLE IF NOT EXISTS manifest_files (
-        depot_id    INTEGER NOT NULL,
-        manifest_id INTEGER NOT NULL,
-        file_id     INTEGER NOT NULL,
-        FOREIGN KEY (depot_id, manifest_id) REFERENCES manifests(depot_id, id)
-          ON UPDATE CASCADE ON DELETE CASCADE,
-        FOREIGN KEY (file_id) REFERENCES all_files(id)
-          ON UPDATE CASCADE ON DELETE CASCADE
-      );
-      CREATE TABLE IF NOT EXISTS all_files (
-        id              INTEGER NOT NULL PRIMARY KEY,
-        path            TEXT    NOT NULL,
-        original_size   INTEGER NOT NULL,
-        compressed_size INTEGER NOT NULL,
-        flags           INTEGER NOT NULL,
-        hash_sha1       INTEGER NOT NULL,
-        link_target     TEXT    NOT NULL
-      );
-      CREATE UNIQUE INDEX IF NOT EXISTS all_files_idx ON all_files (
-        path, original_size, compressed_size, flags, hash_sha1, link_target
-      );
-      """
-    )
+  subparser = subparsers.add_parser("open-steamdb-pages", help="")
+  subparser.set_defaults(func=cmd_open_steamdb_pages)
 
-  with open(
-    os.path.join(PROJECT_DIR, "data", "input_manifests.yaml"), "r"
-  ) as input_manifests_file:
-    input_manifests_data: InputManifestsData = yaml.safe_load(input_manifests_file)
+  subparser = subparsers.add_parser("view", help="")
+  subparser.set_defaults(func=cmd_view_manifest)
+  subparser.add_argument("depot_id")
+  subparser.add_argument("manifest_id")
+
+  subparser = subparsers.add_parser("export", help="")
+  subparser.set_defaults(func=cmd_export_manifests)
+  subparser.add_argument("--output", "-o", required=True)
+
+  args = parser.parse_args()
+  args.func(args)
+
+
+def cmd_update_database(args: argparse.Namespace) -> None:
+  db_connection = connect_to_database()
+  input_manifests_data = load_input_manifests()
 
   each_and_every_manifest: list[tuple[int, int, int]] = []
   for input_app in input_manifests_data["apps"]:
@@ -145,6 +129,7 @@ def main() -> None:
             normalize_file_path(file.file_mapping.filename),
             original_size,
             compressed_size,
+            len(file.chunks),
             file.flags,
             file.file_mapping.sha_content,
             normalize_file_path(file.file_mapping.linktarget),
@@ -153,8 +138,10 @@ def main() -> None:
           # <https://stackoverflow.com/questions/19337029/insert-if-not-exists-statement-in-sqlite#comment45649892_19343100>
           db_cursor.execute(
             """
-            INSERT OR IGNORE INTO all_files(path, original_size, compressed_size, flags, hash_sha1, link_target)
-            VALUES (?, ?, ?, ?, ?, ?)
+            INSERT OR IGNORE INTO all_files(
+              path, original_size, compressed_size, chunks_count, flags, hash_sha1, link_target
+            )
+            VALUES (?, ?, ?, ?, ?, ?, ?)
             """, row
           )
           db_cursor.execute(
@@ -162,11 +149,143 @@ def main() -> None:
             INSERT INTO manifest_files(depot_id, manifest_id, file_id)
             VALUES (?, ?, (
               SELECT id FROM all_files
-              WHERE path = ? AND original_size = ? AND compressed_size = ? AND flags = ? AND hash_sha1 = ? AND link_target = ?
+              WHERE path = ? AND original_size = ? AND compressed_size = ? AND chunks_count = ?
+                AND flags = ? AND hash_sha1 = ? AND link_target = ?
               LIMIT 1
             ))
             """, (depot_id, manifest_id, *row)
           )
+
+
+def cmd_open_steamdb_pages(args: argparse.Namespace) -> None:
+  import webbrowser
+  input_manifests_data = load_input_manifests()
+  for app in input_manifests_data["apps"]:
+    for depot in app["depots"]:
+      webbrowser.open(f"https://steamdb.info/depot/{depot['id']}/manifests/")
+
+
+def cmd_view_manifest(args: argparse.Namespace) -> None:
+  db_connection = connect_to_database()
+  try:
+    export_single_manifest(db_connection, args.depot_id, args.manifest_id, sys.stdout)
+  except BrokenPipeError:
+    pass
+
+
+def cmd_export_manifests(args: argparse.Namespace) -> None:
+  db_connection = connect_to_database()
+  all_manifests: list[tuple[int, int, int]] = []
+  with db_connection, contextlib.closing(db_connection.cursor()) as db_cursor:
+    all_manifests = db_cursor.execute(
+      """
+      SELECT app_id, depot_id, id FROM manifests
+      ORDER BY app_id ASC, depot_id ASC, datetime(creation_time) DESC
+      """
+    ).fetchall()
+  for idx, (app_id, depot_id, manifest_id) in enumerate(all_manifests):
+    print(
+      f"[{idx + 1}/{len(all_manifests)}] Exporting manifest {app_id}/{depot_id}/{manifest_id}..."
+    )
+    with open(os.path.join(args.output, f"manifest_{depot_id}_{manifest_id}.txt"), "w") as file:
+      export_single_manifest(db_connection, depot_id, manifest_id, file)
+
+
+def export_single_manifest(
+  db_connection: sqlite3.Connection, depot_id: int, manifest_id: int, output: IO[str]
+) -> None:
+  """
+  The exported text format is basically a rip-off from
+  <https://github.com/SteamRE/DepotDownloader/blob/DepotDownloader_2.4.4/DepotDownloader/ContentDownloader.cs#L1339-L1372>.
+  """
+
+  with db_connection, contextlib.closing(db_connection.cursor()) as db_cursor:
+    result = db_cursor.execute(
+      """
+      SELECT creation_time, original_size, compressed_size FROM manifests
+      WHERE depot_id = ? AND id = ? LIMIT 1
+      """, (depot_id, manifest_id)
+    ).fetchone()
+    if result is None:
+      raise LookupError("Manifest not found!")
+    creation_time, original_size, compressed_size = result
+
+    files = db_cursor.execute(
+      """
+      SELECT a.path, a.original_size, a.flags, a.hash_sha1, a.link_target FROM all_files AS a
+      INNER JOIN manifest_files AS m ON a.id = m.file_id
+      WHERE m.depot_id = ? AND m.manifest_id = ?
+      ORDER BY a.path ASC
+      """, (depot_id, manifest_id)
+    ).fetchall()
+
+  if isinstance(creation_time, int):
+    creation_time = datetime.fromtimestamp(creation_time, timezone.utc)
+  else:
+    creation_time = datetime.fromisoformat(creation_time)
+
+  output.write(f"Content Manifest for Depot {depot_id}\n")
+  output.write("\n")
+  output.write(f"Manifest ID            : {manifest_id}\n")
+  output.write(f"Creation time          : {creation_time}\n")
+  output.write(f"Total number of files  : {len(files)}\n")
+  output.write(f"Total bytes on disk    : {original_size}\n")
+  output.write(f"Total bytes compressed : {compressed_size}\n")
+  output.write("\n")
+  output.write("          Size Hash                                     Flags Name\n")
+  output.write("-------------- ---------------------------------------- ----- ---------------\n")
+  for path, original_size, flags, hash_sha1, link_target in files:
+    output.write(f"{original_size:14} {bytes.hex(hash_sha1):<40} {flags:5} {path}")
+    if link_target is not None and len(link_target) > 0:
+      output.write(f" -> {link_target}")
+    output.write("\n")
+  output.flush()
+
+
+def load_input_manifests() -> InputManifestsData:
+  with open(os.path.join(PROJECT_DIR, "data", "input_manifests.yaml"), "r") as file:
+    return yaml.safe_load(file)
+
+
+def connect_to_database() -> sqlite3.Connection:
+  db_connection = sqlite3.connect(os.path.join(PROJECT_DIR, "data", "manifests.sqlite3"))
+  with db_connection, contextlib.closing(db_connection.cursor()) as db_cursor:
+    db_cursor.executescript(
+      """
+      CREATE TABLE IF NOT EXISTS manifests (
+        app_id          INTEGER NOT NULL,
+        depot_id        INTEGER NOT NULL,
+        id              INTEGER NOT NULL,
+        creation_time   TEXT    NOT NULL,
+        original_size   INTEGER NOT NULL,
+        compressed_size INTEGER NOT NULL,
+        PRIMARY KEY (depot_id, id)
+      );
+      CREATE TABLE IF NOT EXISTS manifest_files (
+        depot_id    INTEGER NOT NULL,
+        manifest_id INTEGER NOT NULL,
+        file_id     INTEGER NOT NULL,
+        FOREIGN KEY (depot_id, manifest_id) REFERENCES manifests(depot_id, id)
+          ON UPDATE CASCADE ON DELETE CASCADE,
+        FOREIGN KEY (file_id) REFERENCES all_files(id)
+          ON UPDATE CASCADE ON DELETE CASCADE
+      );
+      CREATE TABLE IF NOT EXISTS all_files (
+        id              INTEGER NOT NULL PRIMARY KEY,
+        path            TEXT    NOT NULL,
+        original_size   INTEGER NOT NULL,
+        compressed_size INTEGER NOT NULL,
+        chunks_count    INTEGER NOT NULL,
+        flags           INTEGER NOT NULL,
+        hash_sha1       INTEGER NOT NULL,
+        link_target     TEXT    NOT NULL
+      );
+      CREATE UNIQUE INDEX IF NOT EXISTS all_files_idx ON all_files (
+        path, original_size, compressed_size, chunks_count, flags, hash_sha1, link_target
+      );
+      """
+    )
+  return db_connection
 
 
 class MySteamClient(SteamClient):
