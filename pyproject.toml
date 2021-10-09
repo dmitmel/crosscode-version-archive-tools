@@ -12,6 +12,9 @@ steam = {extras = ["client"], version = "^1.2.0"}
 typing-extensions = "^3.10.0"
 
 [tool.poetry.dev-dependencies]
+pyright = "^0.0.10"
+yapf = "^0.31.0"
+toml = "^0.10.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -21,3 +24,12 @@ build-backend = "poetry.core.masonry.api"
 venvPath = "."
 venv = ".venv"
 typeCheckingMode = "basic"
+
+[tool.yapf]
+based_on_style = "google"
+column_limit = 99
+indent_width = 2
+continuation_indent_width = 2
+dedent_closing_brackets = true
+coalesce_brackets = true
+spaces_around_power_operator = true
