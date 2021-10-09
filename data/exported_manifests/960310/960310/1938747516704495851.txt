@@ -1,0 +1,28 @@
+Content Manifest for Depot 960310
+
+Manifest ID            : 1938747516704495851
+Creation time          : 2021-03-24 20:14:56+00:00
+Total number of files  : 18
+Total bytes on disk    : 118902
+Total bytes compressed : 106432
+
+          Size Hash                                     Flags Name
+-------------- ---------------------------------------- ----- ---------------------------------------------------------------------
+             0 0000000000000000000000000000000000000000    64 assets/extension/ninja-skin
+             0 0000000000000000000000000000000000000000    64 assets/extension/ninja-skin/data
+             0 0000000000000000000000000000000000000000    64 assets/extension/ninja-skin/data/animations
+             0 0000000000000000000000000000000000000000    64 assets/extension/ninja-skin/data/animations/player-skins
+         11444 3d2dd644dce1d63bd1ac83fb9dd0049869d2b374     0 assets/extension/ninja-skin/data/animations/player-skins/ninja.json
+             0 0000000000000000000000000000000000000000    64 assets/extension/ninja-skin/data/effects
+             0 0000000000000000000000000000000000000000    64 assets/extension/ninja-skin/data/effects/skins
+          1027 9b2dbbc2d3488466bb674cfca2843d4b4e903dbb     0 assets/extension/ninja-skin/data/effects/skins/ninja.json
+             0 0000000000000000000000000000000000000000    64 assets/extension/ninja-skin/media
+             0 0000000000000000000000000000000000000000    64 assets/extension/ninja-skin/media/entity
+             0 0000000000000000000000000000000000000000    64 assets/extension/ninja-skin/media/entity/player
+             0 0000000000000000000000000000000000000000    64 assets/extension/ninja-skin/media/entity/player/skins
+         30737 debc8e2fcbf81a765a553b13b99c7913a0291c7a     0 assets/extension/ninja-skin/media/entity/player/skins/ninja-throw.png
+         53468 e281e035f654241af2535808ddf7ebd727317a54     0 assets/extension/ninja-skin/media/entity/player/skins/ninja.png
+             0 0000000000000000000000000000000000000000    64 assets/extension/ninja-skin/media/gui
+             0 0000000000000000000000000000000000000000    64 assets/extension/ninja-skin/media/gui/skins
+         19592 a34087355104215745908e8d3cceeea74d16c221     0 assets/extension/ninja-skin/media/gui/skins/ninja.png
+          2634 532842c75182b22421e28d880032e9776e9e555f     0 assets/extension/ninja-skin/ninja-skin.json

@@ -1,0 +1,52 @@
+Content Manifest for Depot 1585791
+
+Manifest ID            : 5822091486179298236
+Creation time          : 2021-04-01 11:54:57+00:00
+Total number of files  : 42
+Total bytes on disk    : 1119481
+Total bytes compressed : 1064448
+
+          Size Hash                                     Flags Name
+-------------- ---------------------------------------- ----- ----------------------------------------------------------------------------------------------------------------------
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data/animations
+          3992 303f74b4160eb3e6770b480a82bcd77b9b4f0104     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data/animations/manlea-hugging.json
+           613 7b69642d7afd9112fe58b729e331c7134c6f7e85     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data/animations/manlea-poses-debug.json
+          5987 966ff30ecbd524b5725135005555489ae5e85fa4     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data/animations/manlea-poses.json
+           654 9ed9913cb6bedcef96ad3422e40f94811a7e4cb5     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data/animations/manlea-sleeping.json
+           438 a8ee64dfed489f9207fd256b67007f7c8abb4700     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data/animations/manlea-weak.json
+         11426 09af05c47aff5b2e6ecc972b5ceb15f05c8bba52     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data/animations/manlea.json
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data/characters
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data/characters/main
+         17275 33797d687f671217465f57eff7555dd43eef9b88     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data/characters/main/manlea.json
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data/effects
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data/effects/skins
+          1027 9b2dbbc2d3488466bb674cfca2843d4b4e903dbb     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/data/effects/skins/manlea.json
+          4382 ad8373c6043db48fd126a877d660ed640a8d2a04     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/manlea.json
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/entity
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/entity/player
+         18565 06755fa9ec53a4ef7a023c39800cc9cc3c92f1d9     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/entity/player/manlea-hugging.png
+          4895 2a04ef60fad0552bf4df4c66a7cc7987e34d7c02     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/entity/player/manlea-move-weak.png
+         66208 feb9c1f566bc083aca925a639d3aeb649584a022     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/entity/player/manlea-move.png
+          1684 dfa650be3e4b4024acd4204f1f3f413f396cffa5     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/entity/player/manlea-poses-debug.png
+         29948 466f81d6e71a53e24241902ae9851af47e9911c1     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/entity/player/manlea-poses.png
+          3760 0c94f7fe649826fd196fa25e39bcb936cf5cd7f6     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/entity/player/manlea-sleeping.png
+         37534 a1763745107a1b6ed23ca14d12f0cc0354bc8e9e     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/entity/player/manlea-throw.png
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/face
+         21178 477218bbb253c85ae34472a18a0356b7b059d194     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/face/manlea-hand.png
+         20212 d44694a7a367d72670aa4083775131d86f8e8146     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/face/manlea-panic.png
+         19845 cda9c85b7d4707b737505146030dd9f18b7fa153     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/face/manlea-special.png
+        136430 7e2fe7fa64bba9ff5c3e85cdebd56bd0926e4b64     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/face/manlea.png
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/gui
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/gui/skins
+         14541 47dbb6a10001ea1fdc4d7d9e266031aca6ec92ca     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/gui/skins/manlea.png
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/map
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/map/baked
+        153250 e6c234905225a0eee8bf60313e087cf87a181031     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/map/baked/lea-bakii-kum-manlea.png
+        101211 8fde1e3b40f8e821f244404714d4eb6ce2265491     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/map/baked/lea-ctron-bakii-kum-manlea.png
+         49734 d6b8cad6e4160678fd2c5a9aec79c6834da11a91     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/map/baked/lea-server-manlea.png
+        145477 633fd70a0db880f25cb29a173dd19a896edc5e65     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/map/baked/the-room-conversation-clear-manlea.png
+        139379 e31e7755986fdd84505ad4e6ee8fc661e41a4514     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/map/baked/the-room-conversation-shelf-manlea.png
+        109836 50c3444a1262fdaf20eb131cc69896639c998e0e     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/manlea/media/map/baked/tree-top-ctron-manlea.png

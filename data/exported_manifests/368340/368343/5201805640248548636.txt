@@ -1,0 +1,14 @@
+Content Manifest for Depot 368343
+
+Manifest ID            : 5201805640248548636
+Creation time          : 2016-02-12 19:20:13+00:00
+Total number of files  : 4
+Total bytes on disk    : 180582659
+Total bytes compressed : 112426672
+
+          Size Hash                                     Flags Name
+-------------- ---------------------------------------- ----- ----------------
+     158086166 1886d6936a5fe5ae557343ea3331ebe7c558af31     0 CrossCode
+      10457856 0249f28ca75b97fafef60a40a3a45620ab31eb52     0 icudtl.dat
+       4541416 b990c15c2a5b3eee4d7a8bb811f4b224823dfe02     0 libffmpegsumo.so
+       7497221 fcc4f2d0c3f6e94a248c3cced7ab7c72df199179     0 nw.pak

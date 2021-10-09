@@ -187,7 +187,14 @@ def cmd_export_manifests(args: argparse.Namespace) -> None:
     print(
       f"[{idx + 1}/{len(all_manifests)}] Exporting manifest {app_id}/{depot_id}/{manifest_id}..."
     )
-    with open(os.path.join(args.output, f"manifest_{depot_id}_{manifest_id}.txt"), "w") as file:
+    export_dir = args.output
+    for component in (str(app_id), str(depot_id)):
+      try:
+        export_dir = os.path.join(export_dir, component)
+        os.mkdir(export_dir)
+      except FileExistsError:
+        pass
+    with open(os.path.join(export_dir, str(manifest_id) + ".txt"), "w") as file:
       export_single_manifest(db_connection, depot_id, manifest_id, file)
 
 
@@ -233,7 +240,9 @@ def export_single_manifest(
   output.write(f"Total bytes compressed : {compressed_size}\n")
   output.write("\n")
   output.write("          Size Hash                                     Flags Name\n")
-  output.write("-------------- ---------------------------------------- ----- ---------------\n")
+  output.write("-------------- ---------------------------------------- ----- ")
+  output.write("-" * max(20, max(len(path) for path, *_ in files)))
+  output.write("\n")
   for path, original_size, flags, hash_sha1, link_target in files:
     output.write(f"{original_size:14} {bytes.hex(hash_sha1):<40} {flags:5} {path}")
     if link_target is not None and len(link_target) > 0:

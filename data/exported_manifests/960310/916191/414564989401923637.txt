@@ -1,0 +1,45 @@
+Content Manifest for Depot 916191
+
+Manifest ID            : 414564989401923637
+Creation time          : 2019-09-11 19:32:35+00:00
+Total number of files  : 35
+Total bytes on disk    : 236909
+Total bytes compressed : 107504
+
+          Size Hash                                     Flags Name
+-------------- ---------------------------------------- ----- -------------------------------------------------------------------------------------------------------------
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/data
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/data/animations
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/data/animations/player-skins
+         11444 3d2dd644dce1d63bd1ac83fb9dd0049869d2b374     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/data/animations/player-skins/ninja.json
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/data/effects
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/data/effects/skins
+          1027 9b2dbbc2d3488466bb674cfca2843d4b4e903dbb     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/data/effects/skins/ninja.json
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/media
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/media/entity
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/media/entity/player
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/media/entity/player/skins
+         30737 debc8e2fcbf81a765a553b13b99c7913a0291c7a     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/media/entity/player/skins/ninja-throw.png
+         53468 e281e035f654241af2535808ddf7ebd727317a54     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/media/entity/player/skins/ninja.png
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/media/gui
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/media/gui/skins
+         19592 a34087355104215745908e8d3cceeea74d16c221     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/media/gui/skins/ninja.png
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin
+          2219 9f05af1c1260c2d3417f5ed693a82b5dcb34a2f2     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin.json
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/data
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/data/animations
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/data/animations/player-skins
+         11444 3d2dd644dce1d63bd1ac83fb9dd0049869d2b374     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/data/animations/player-skins/ninja.json
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/data/effects
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/data/effects/skins
+          1027 9b2dbbc2d3488466bb674cfca2843d4b4e903dbb     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/data/effects/skins/ninja.json
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/media
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/media/entity
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/media/entity/player
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/media/entity/player/skins
+         30737 debc8e2fcbf81a765a553b13b99c7913a0291c7a     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/media/entity/player/skins/ninja-throw.png
+         53468 e281e035f654241af2535808ddf7ebd727317a54     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/media/entity/player/skins/ninja.png
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/media/gui
+             0 0000000000000000000000000000000000000000    64 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/media/gui/skins
+         19592 a34087355104215745908e8d3cceeea74d16c221     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/media/gui/skins/ninja.png
+          2154 12bd7d1f0182b56bad296ef986e9e087e3bd4f11     0 CrossCode.app/Contents/Resources/app.nw/assets/extension/ninja-skin/ninja-skin.json

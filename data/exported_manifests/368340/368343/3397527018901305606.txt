@@ -1,0 +1,74 @@
+Content Manifest for Depot 368343
+
+Manifest ID            : 3397527018901305606
+Creation time          : 2016-10-28 15:57:28+00:00
+Total number of files  : 64
+Total bytes on disk    : 272664094
+Total bytes compressed : 172174624
+
+          Size Hash                                     Flags Name
+-------------- ---------------------------------------- ----- ------------------
+     131499572 bda49f6ac3841447a083df0a144620f257166f91     0 CrossCode
+      10209568 0d042fc383761dd09e53196c8a39faeba8a980df     0 icudtl.dat
+             0 0000000000000000000000000000000000000000    64 lib
+       4513368 e6151fc9b942e407e7e3be32ff26e9173e804ac1     0 lib/libffmpeg.so
+       4444624 f7a56c972bbcfa08fc164e3f9dcb82435ec2b80f     0 lib/libnode.so
+      96143112 0b67aa4949758eeb4c7e27889249c621d7ce484a     0 lib/libnw.so
+             0 0000000000000000000000000000000000000000    64 locales
+        344837 74b437dc745329bd4317187dc1c2dd51455b45a7     0 locales/am.pak
+        338965 893ece394e378279230d2caa0b17d10f63ab4af4     0 locales/ar.pak
+        408421 2acb9ab092ae7120b5bdfbce0c81fac47190e194     0 locales/bg.pak
+        527771 fc1cafaea86df95f2a64a62e79630cbd63d9de67     0 locales/bn.pak
+        248685 a77bf7bc2f59e086f1f3ed2748d1e513f6674d75     0 locales/ca.pak
+        250515 3a57411eeeb64a79e9315913c04daa54dfc80fdd     0 locales/cs.pak
+        224809 41bc95e3acbdcf296ee027109d1a48832eadec1f     0 locales/da.pak
+        245173 6a0a640bfd58daf2e02b9b2e48fdc2b710d667ac     0 locales/de.pak
+        443268 ca659af2fccaadb6422eac4b1e2c87f7ab12006a     0 locales/el.pak
+        202297 bc50ff26ae0975da4ee720e214424f0911bdc8ad     0 locales/en-GB.pak
+        202412 a7580381e20e5658372c903600a3e5f3644ccad9     0 locales/en-US.pak
+        246450 aebe0697d8c124e6aa2b514c9ffebf1080940c4d     0 locales/es-419.pak
+        251275 c68ee1077598f35feb4d254df2a9088513e9515e     0 locales/es.pak
+        217901 24c17f470bc45efb1563961a5e146d162fd87ce2     0 locales/et.pak
+        350991 ff26e36ebd2fed3bf1f586114bb3ade9350279ea     0 locales/fa.pak
+        230748 72bcc17608fc9ad3a1443d8f7006b9354821693f     0 locales/fi.pak
+        251430 94d5bee18d0fdbf4bd2f24ae56f790c42ef8b637     0 locales/fil.pak
+        267107 e38f43bba25ed8910ff9e4c6fd550c4d74ea775a     0 locales/fr.pak
+        493755 1e836de7aa742a63c96a715edcd82609a14a37e2     0 locales/gu.pak
+        287626 8a65d5324419dcef147e4b7088528126cb46d70a     0 locales/he.pak
+        507267 2c21895077287c5b617c351f26425187625f43df     0 locales/hi.pak
+        235086 7437a8ea800937d5a4e6b8d9dfc7e71a3043b447     0 locales/hr.pak
+        260492 926ac06c4cc0ae4645880836ad6e6ca5b824f456     0 locales/hu.pak
+        218044 6b3afcf6a88aa457761d669d30ed77e36adab064     0 locales/id.pak
+        240973 c4e15bb5c501ccad0cdcbf568e517acd146ed1c1     0 locales/it.pak
+        296530 a485f89f1399e4faddb00ae772db7690ceb340ed     0 locales/ja.pak
+        571433 e1345d72e9bc1dd087e0b5b5dac3662db61be4f0     0 locales/kn.pak
+        251403 7003758933620d873e8b4e2c326523801881527a     0 locales/ko.pak
+        250546 68f6a1d53acf463f016d8b771c6bf6da82b127b7     0 locales/lt.pak
+        252743 68d2b3039d52256006b60042ffd1fa51859b8f04     0 locales/lv.pak
+        626102 a0a8d34219f5a41e2ae76525cd8bf76401fbc172     0 locales/ml.pak
+        500759 f94d1b9220519350940ab803e150674b14b6188f     0 locales/mr.pak
+        224280 9297d17afbb0fe821bb3aad6b7e6c3a4139bd09d     0 locales/ms.pak
+        223251 c318386001c726228656da0218d1e956f32ccb94     0 locales/nb.pak
+        235808 31e74d15b9339afc8d53786ab53cd9d4414837d7     0 locales/nl.pak
+        244661 9a1958ac1a679c0d816fe51788623d9e26f00523     0 locales/pl.pak
+        239860 f1b01a08507632569f184b35787e690a8f939f8d     0 locales/pt-BR.pak
+        243273 f6852af012dbab33a9477c09154bfe17fbabc1a6     0 locales/pt-PT.pak
+        250772 b0ac5175163d8bdc04de9519d5e90136c477fa78     0 locales/ro.pak
+        382925 e542168d35262138bce7de26eac768a7f65d979c     0 locales/ru.pak
+        256391 95b0a150082f617537c85e1852b6702110070841     0 locales/sk.pak
+        234221 eeeb3e951211e8fe3a551d964a64d1e4eed3d9b8     0 locales/sl.pak
+        376973 172302e0e4e26612ade7ed7f90528b74986bbe4e     0 locales/sr.pak
+        224759 f750fc88617cfb1ebf7ac2b8973d955c4971032f     0 locales/sv.pak
+        225628 7ce58b7fc2d669e8a1d3c3d25b707d09e0637768     0 locales/sw.pak
+        584441 b18557b31119a4126535ae8dd7715b06072d0bde     0 locales/ta.pak
+        554770 27ca20fc31c47ebea62a77928afa998076a58ca6     0 locales/te.pak
+        482829 00f3332fed7a43b435ff01475e0c84cb2fb17ec2     0 locales/th.pak
+        242153 caaf5687ae083e39c9b6d6e13ef86c67a3a04e5b     0 locales/tr.pak
+        392520 de9661f3f63d381fa695d7efae9d9e75fca0b198     0 locales/uk.pak
+        275542 3ed413fbcd62b5fb5a94d0618dd5e5343b50769f     0 locales/vi.pak
+        203062 9bce2ed0d71ce176354a91f21214a2ffd6bab2d1     0 locales/zh-CN.pak
+        205389 ecd7955bc9b8281b3f5b10bfcecd6477f33e6c86     0 locales/zh-TW.pak
+        408051 cf7674789a414fb021cc194a33418bcdbb0977cb     0 natives_blob.bin
+        661275 25be52c6ee00c50eb9e0f2ddc4790b9d3ffb678a     0 nw_100_percent.pak
+       7607062 b80bf6a1958c07d1c9bdcf7cff7cf62b10e2b88c     0 resources.pak
+        628140 3c5a12969e664074567230e89733f2bfe42142dd     0 snapshot_blob.bin

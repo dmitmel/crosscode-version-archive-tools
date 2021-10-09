@@ -1,0 +1,18 @@
+Content Manifest for Depot 368341
+
+Manifest ID            : 7058989362692624043
+Creation time          : 2015-11-06 14:58:43+00:00
+Total number of files  : 8
+Total bytes on disk    : 133096731
+Total bytes compressed : 94655488
+
+          Size Hash                                     Flags Name
+-------------- ---------------------------------------- ----- ------------------
+       3231832 9dcd5b3a05b4fd1c71198fc11aa0f8f569a3e21d     0 D3DCompiler_46.dll
+        793330 075600c48889b0036e94c5c87ae1df5bdd87d9df     0 credits.html
+     113276724 927354494fec7594e0b5110d23c6c4bd9ce78b2e     0 crosscode-beta.exe
+        860672 1703d92c0727a0cec1ad75b18ad21bf9491cefd7     0 ffmpegsumo.dll
+       9956864 9cf34066a3a28bf0dccff0e4b234a9ac22cffb8d     0 icudt.dll
+        102400 e8f246697bbe95f089e63d45a40d6fb8b0b2a0de     0 libEGL.dll
+        873984 8b83c88570a8cc1c3630ebda11955c5ea7a04416     0 libGLESv2.dll
+       4000925 20d74c3cd40b360c2315475fbb7ab0f039d3590c     0 nw.pak
