@@ -2,12 +2,13 @@ Content Manifest for Depot 368341
 
 Manifest ID            : 8159863442404101747
 Creation time          : 2015-11-09 17:19:44+00:00
+Seen by SteamDB at     : 2015-11-09 17:21:14+00:00
 Total number of files  : 8
 Total bytes on disk    : 133120513
 Total bytes compressed : 94679744
 
           Size Hash                                     Flags Name
--------------- ---------------------------------------- ----- ------------------
+-------------- ---------------------------------------- ----- --------------------
        3231832 9dcd5b3a05b4fd1c71198fc11aa0f8f569a3e21d     0 D3DCompiler_46.dll
         793330 075600c48889b0036e94c5c87ae1df5bdd87d9df     0 credits.html
      113300506 9cd37dae3c982406c7c3c18c982cd9ef60662ae8     0 crosscode-beta.exe

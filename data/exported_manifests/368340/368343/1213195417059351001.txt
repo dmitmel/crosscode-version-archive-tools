@@ -2,12 +2,13 @@ Content Manifest for Depot 368343
 
 Manifest ID            : 1213195417059351001
 Creation time          : 2017-03-13 15:37:27+00:00
+Seen by SteamDB at     : 2017-03-13 16:13:11+00:00
 Total number of files  : 64
 Total bytes on disk    : 303025751
 Total bytes compressed : 202852464
 
           Size Hash                                     Flags Name
--------------- ---------------------------------------- ----- ------------------
+-------------- ---------------------------------------- ----- --------------------
      161861229 b3e6525babbd79cf530e41e6d8f2ee1db0278b1b     0 CrossCode
       10209568 0d042fc383761dd09e53196c8a39faeba8a980df     0 icudtl.dat
              0 0000000000000000000000000000000000000000    64 lib

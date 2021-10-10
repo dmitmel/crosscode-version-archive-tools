@@ -2,6 +2,7 @@ Content Manifest for Depot 368342
 
 Manifest ID            : 1855032274013080673
 Creation time          : 2017-10-15 15:01:30+00:00
+Seen by SteamDB at     : 2017-10-15 15:51:11+00:00
 Total number of files  : 3272
 Total bytes on disk    : 565406908
 Total bytes compressed : 259449712

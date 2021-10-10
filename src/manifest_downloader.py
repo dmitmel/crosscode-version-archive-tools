@@ -41,8 +41,8 @@ class InputManifestsDepot(TypedDict):
 
 
 class InputManifestsManifest(TypedDict):
-  title: str
   id: int
+  seen: int
 
 
 def main() -> None:
@@ -72,11 +72,13 @@ def cmd_update_database(args: argparse.Namespace) -> None:
   db_connection = connect_to_database()
   input_manifests_data = load_input_manifests()
 
-  each_and_every_manifest: list[tuple[int, int, int]] = []
+  each_and_every_manifest: list[tuple[int, int, int, InputManifestsManifest]] = []
   for input_app in input_manifests_data["apps"]:
     for input_depot in input_app["depots"]:
       for input_manifest in input_depot["manifests"]:
-        each_and_every_manifest.append((input_app["id"], input_depot["id"], input_manifest["id"]))
+        each_and_every_manifest.append(
+          (input_app["id"], input_depot["id"], input_manifest["id"], input_manifest)
+        )
 
   auth_secrets_dir = os.path.join(PROJECT_DIR, "data", "steam_auth")
   os.chmod(auth_secrets_dir, 0o700)
@@ -87,7 +89,7 @@ def cmd_update_database(args: argparse.Namespace) -> None:
     print(f"Logged in as: {client.user.name if client.user is not None else None}")
     cdn_client = CDNClient(client)
 
-    for idx, (app_id, depot_id, manifest_id) in enumerate(each_and_every_manifest):
+    for idx, (app_id, depot_id, manifest_id, manifest_obj) in enumerate(each_and_every_manifest):
       print(
         f"[{idx + 1}/{len(each_and_every_manifest)}] Downloading manifest {app_id}/{depot_id}/{manifest_id}..."
       )
@@ -106,13 +108,14 @@ def cmd_update_database(args: argparse.Namespace) -> None:
 
         db_cursor.execute(
           """
-          INSERT INTO manifests(app_id, depot_id, id, creation_time, original_size, compressed_size)
-          VALUES (?, ?, ?, ?, ?, ?)
+          INSERT INTO manifests(app_id, depot_id, id, created_at, seen_by_steamdb_at, original_size, compressed_size)
+          VALUES (?, ?, ?, ?, ?, ?, ?)
           """, (
             app_id,
             depot_id,
             manifest_id,
             datetime.fromtimestamp(manifest.creation_time, timezone.utc),
+            datetime.fromtimestamp(manifest_obj["seen"], timezone.utc),
             manifest.size_original,
             manifest.size_compressed,
           )
@@ -180,7 +183,7 @@ def cmd_export_manifests(args: argparse.Namespace) -> None:
     all_manifests = db_cursor.execute(
       """
       SELECT app_id, depot_id, id FROM manifests
-      ORDER BY app_id ASC, depot_id ASC, datetime(creation_time) DESC
+      ORDER BY app_id ASC, depot_id ASC, datetime(created_at) DESC
       """
     ).fetchall()
   for idx, (app_id, depot_id, manifest_id) in enumerate(all_manifests):
@@ -209,13 +212,13 @@ def export_single_manifest(
   with db_connection, contextlib.closing(db_connection.cursor()) as db_cursor:
     result = db_cursor.execute(
       """
-      SELECT creation_time, original_size, compressed_size FROM manifests
+      SELECT created_at, seen_by_steamdb_at, original_size, compressed_size FROM manifests
       WHERE depot_id = ? AND id = ? LIMIT 1
       """, (depot_id, manifest_id)
     ).fetchone()
     if result is None:
       raise LookupError("Manifest not found!")
-    creation_time, original_size, compressed_size = result
+    created_at, seen_by_steamdb_at, original_size, compressed_size = result
 
     files = db_cursor.execute(
       """
@@ -226,15 +229,21 @@ def export_single_manifest(
       """, (depot_id, manifest_id)
     ).fetchall()
 
-  if isinstance(creation_time, int):
-    creation_time = datetime.fromtimestamp(creation_time, timezone.utc)
+  if isinstance(created_at, int):
+    created_at = datetime.fromtimestamp(created_at, timezone.utc)
   else:
-    creation_time = datetime.fromisoformat(creation_time)
+    created_at = datetime.fromisoformat(created_at)
+
+  if isinstance(seen_by_steamdb_at, int):
+    seen_by_steamdb_at = datetime.fromtimestamp(seen_by_steamdb_at, timezone.utc)
+  else:
+    seen_by_steamdb_at = datetime.fromisoformat(seen_by_steamdb_at)
 
   output.write(f"Content Manifest for Depot {depot_id}\n")
   output.write("\n")
   output.write(f"Manifest ID            : {manifest_id}\n")
-  output.write(f"Creation time          : {creation_time}\n")
+  output.write(f"Creation time          : {created_at}\n")
+  output.write(f"Seen by SteamDB at     : {seen_by_steamdb_at}\n")
   output.write(f"Total number of files  : {len(files)}\n")
   output.write(f"Total bytes on disk    : {original_size}\n")
   output.write(f"Total bytes compressed : {compressed_size}\n")
@@ -262,12 +271,13 @@ def connect_to_database() -> sqlite3.Connection:
     db_cursor.executescript(
       """
       CREATE TABLE IF NOT EXISTS manifests (
-        app_id          INTEGER NOT NULL,
-        depot_id        INTEGER NOT NULL,
-        id              INTEGER NOT NULL,
-        creation_time   TEXT    NOT NULL,
-        original_size   INTEGER NOT NULL,
-        compressed_size INTEGER NOT NULL,
+        app_id             INTEGER NOT NULL,
+        depot_id           INTEGER NOT NULL,
+        id                 INTEGER NOT NULL,
+        created_at         TEXT    NOT NULL,
+        seen_by_steamdb_at TEXT    NOT NULL,
+        original_size      INTEGER NOT NULL,
+        compressed_size    INTEGER NOT NULL,
         PRIMARY KEY (depot_id, id)
       );
       CREATE TABLE IF NOT EXISTS manifest_files (
