@@ -717,9 +717,6 @@ apps:
           - { id: 4069402854539356410, seen: 1538254678 }
           - { id: 7037667955591267467, seen: 1537911461 }
           - { id: 4791086447328428946, seen: 1537910922 }
-  - id: 960310
-    title: Ninja Skin
-    depots:
       - id: 960310
         title: Ninja Skin
         manifests:
@@ -742,9 +739,6 @@ apps:
           - { id: 3498473320616428612, seen: 1540224605 }
           - { id: 9129566535355997105, seen: 1539113297 }
           - { id: 7063525943932437866, seen: 1539113281 }
-  - id: 1517030
-    title: New Home
-    depots:
       - id: 1517030
         title: New Home
         manifests:
@@ -779,9 +773,6 @@ apps:
           - { id: 4007102089011978020, seen: 1614431223 }
           - { id: 5478477144785665206, seen: 1614361423 }
           - { id: 8284901130846278835, seen: 1614361408 }
-  - id: 1585790
-    title: Manlea
-    depots:
       - id: 1585790
         title: Manlea
         manifests:
