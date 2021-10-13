@@ -29,19 +29,19 @@ class InputManifestsData(TypedDict):
 
 
 class InputManifestsApp(TypedDict):
-  id: int
+  id: str
   title: str
   depots: list[InputManifestsDepot]
 
 
 class InputManifestsDepot(TypedDict):
-  id: int
+  id: str
   title: str
   manifests: list[InputManifestsManifest]
 
 
 class InputManifestsManifest(TypedDict):
-  id: int
+  id: str
   seen: int
 
 
@@ -76,9 +76,9 @@ def cmd_update_database(args: argparse.Namespace) -> None:
   for input_app in input_manifests_data["apps"]:
     for input_depot in input_app["depots"]:
       for input_manifest in input_depot["manifests"]:
-        each_and_every_manifest.append(
-          (input_app["id"], input_depot["id"], input_manifest["id"], input_manifest)
-        )
+        each_and_every_manifest.append((
+          int(input_app["id"]), int(input_depot["id"]), int(input_manifest["id"]), input_manifest
+        ))
 
   auth_secrets_dir = os.path.join(PROJECT_DIR, "data", "steam_auth")
   os.chmod(auth_secrets_dir, 0o700)
