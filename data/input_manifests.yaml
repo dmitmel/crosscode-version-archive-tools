@@ -1,3 +1,5 @@
+# Data extracted from SteamDB (by running a snippet in the devtools console,
+# not with a web scraper!).
 username: dmitmel
 apps:
   - id: "368340"

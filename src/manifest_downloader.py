@@ -58,7 +58,7 @@ def main() -> None:
   subparser = subparsers.add_parser("view", help="")
   subparser.set_defaults(func=cmd_view_manifest)
   subparser.add_argument("depot_id")
-  subparser.add_argument("manifest_id")
+  subparser.add_argument("manifest_id", nargs="?")
 
   subparser = subparsers.add_parser("export", help="")
   subparser.set_defaults(func=cmd_export_manifests)
@@ -178,7 +178,7 @@ def cmd_view_manifest(args: argparse.Namespace) -> None:
 
 def cmd_export_manifests(args: argparse.Namespace) -> None:
   db_connection = connect_to_database()
-  all_manifests: list[tuple[int, int, int]] = []
+  all_manifests: list[sqlite3.Row] = []
   with db_connection, contextlib.closing(db_connection.cursor()) as db_cursor:
     all_manifests = db_cursor.execute(
       """
@@ -202,7 +202,7 @@ def cmd_export_manifests(args: argparse.Namespace) -> None:
 
 
 def export_single_manifest(
-  db_connection: sqlite3.Connection, depot_id: int, manifest_id: int, output: IO[str]
+  db_connection: sqlite3.Connection, depot_id: int, manifest_id: Optional[int], output: IO[str]
 ) -> None:
   """
   The exported text format is basically a rip-off from
@@ -210,7 +210,19 @@ def export_single_manifest(
   """
 
   with db_connection, contextlib.closing(db_connection.cursor()) as db_cursor:
-    result = db_cursor.execute(
+    if manifest_id is None:
+      result: sqlite3.Row = db_cursor.execute(
+        """
+        SELECT id FROM manifests
+        WHERE depot_id = ?
+        ORDER BY created_at DESC
+        LIMIT 1
+        """, (depot_id,)
+      ).fetchone()
+      if result is not None:
+        manifest_id, = result
+
+    result: sqlite3.Row = db_cursor.execute(
       """
       SELECT created_at, seen_by_steamdb_at, original_size, compressed_size FROM manifests
       WHERE depot_id = ? AND id = ? LIMIT 1
@@ -220,7 +232,7 @@ def export_single_manifest(
       raise LookupError("Manifest not found!")
     created_at, seen_by_steamdb_at, original_size, compressed_size = result
 
-    files = db_cursor.execute(
+    files: list[sqlite3.Row] = db_cursor.execute(
       """
       SELECT a.path, a.original_size, a.flags, a.hash_sha1, a.link_target FROM all_files AS a
       INNER JOIN manifest_files AS m ON a.id = m.file_id
@@ -267,6 +279,7 @@ def load_input_manifests() -> InputManifestsData:
 
 def connect_to_database() -> sqlite3.Connection:
   db_connection = sqlite3.connect(os.path.join(PROJECT_DIR, "data", "manifests.sqlite3"))
+  db_connection.row_factory = sqlite3.Row
   with db_connection, contextlib.closing(db_connection.cursor()) as db_cursor:
     db_cursor.executescript(
       """
@@ -327,6 +340,7 @@ class MySteamClient(SteamClient):
     self.credentials_db = sqlite3.connect(
       os.path.join(self.credential_location, "credentials.sqlite3")
     )
+    self.credentials_db.row_factory = sqlite3.Row
     with self.credentials_db, contextlib.closing(self.credentials_db.cursor()) as db_cursor:
       db_cursor.executescript(
         """
@@ -354,7 +368,7 @@ class MySteamClient(SteamClient):
     if self.credentials_db:
       with self.credentials_db, contextlib.closing(self.credentials_db.cursor()) as db_cursor:
         db_cursor.execute(""" SELECT sentry FROM users WHERE username = ? LIMIT 1 """, (username,))
-        result = db_cursor.fetchone()
+        result: sqlite3.Row = db_cursor.fetchone()
         if result and result[0]:
           assert isinstance(result[0], bytes)
           return result[0]
@@ -380,7 +394,7 @@ class MySteamClient(SteamClient):
         db_cursor.execute(
           """ SELECT login_key FROM users WHERE username = ? LIMIT 1 """, (username,)
         )
-        result = db_cursor.fetchone()
+        result: sqlite3.Row = db_cursor.fetchone()
         if result and result[0]:
           assert isinstance(result[0], str)
           return result[0]
