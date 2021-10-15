@@ -31,17 +31,20 @@ class InputManifestsData(TypedDict):
 class InputManifestsApp(TypedDict):
   id: str
   title: str
+  enabled: bool
   depots: list[InputManifestsDepot]
 
 
 class InputManifestsDepot(TypedDict):
   id: str
   title: str
+  enabled: bool
   manifests: list[InputManifestsManifest]
 
 
 class InputManifestsManifest(TypedDict):
   id: str
+  enabled: bool
   seen: int
 
 
@@ -74,8 +77,14 @@ def cmd_update_database(args: argparse.Namespace) -> None:
 
   each_and_every_manifest: list[tuple[int, int, int, InputManifestsManifest]] = []
   for input_app in input_manifests_data["apps"]:
+    if not input_app.get("enabled", True):
+      continue
     for input_depot in input_app["depots"]:
+      if not input_depot.get("enabled", True):
+        continue
       for input_manifest in input_depot["manifests"]:
+        if not input_manifest.get("enabled", True):
+          continue
         each_and_every_manifest.append((
           int(input_app["id"]), int(input_depot["id"]), int(input_manifest["id"]), input_manifest
         ))
