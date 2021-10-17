@@ -1,3 +1,4 @@
 /data/steam_auth/
 /data/manifests.sqlite3
 __pycache__
+*.md.html

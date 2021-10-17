@@ -1,0 +1,12 @@
+<p>please wait...</p>
+<script>
+  try {
+    var fs = require("fs");
+    var dump = JSON.stringify(process.versions, null, 2) + "\n";
+    fs.writeFileSync("process_versions.json", dump, "utf8");
+    document.write("ok");
+  } catch (e) {
+    console.error(e);
+    document.write(e);
+  }
+</script>
