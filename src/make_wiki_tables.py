@@ -77,7 +77,9 @@ def main() -> None:
         return f'<a href="https://steamdb.info/depot/{esc(depot_id)}/"><code>{esc(depot_id)}</code></a>'
 
       def render_manifest_id(depot_id: int, manifest_id: int) -> str:
-        return f'<a href="https://steamdb.info/depot/{esc(depot_id)}/history/?changeid=M:{esc(manifest_id)}"><code>{esc(manifest_id)}</code></a>'
+        url = f"exported_manifests/{esc(app_id)}/{esc(depot_id)}/{esc(manifest_id)}.txt"
+        # url = f"https://steamdb.info/depot/{esc(depot_id)}/history/?changeid=M:{esc(manifest_id)}"
+        return f'<a href="{url}"><code>{esc(manifest_id)}</code></a>'
 
       def render_version(version: str) -> str:
         anchor = version_headers_mapping.get(
