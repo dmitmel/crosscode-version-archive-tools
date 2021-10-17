@@ -1,5 +1,6 @@
 apps:
-  - id: "368340"
+  crosscode:
+    id: "368340"
     depots:
       win32: "368341"
       linux32: "368342"

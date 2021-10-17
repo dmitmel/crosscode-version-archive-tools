@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import gevent.monkey
+
+gevent.monkey.patch_all()
+
 import contextlib
 import os
 import sqlite3
@@ -13,6 +17,7 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEFAULT_BRANCH_NAME = "public"
 
+AppName = NewType("AppName", str)
 AppId = NewType("AppId", str)
 DepotId = NewType("DepotId", str)
 DepotName = NewType("DepotName", str)
@@ -22,7 +27,7 @@ ManifestId = NewType("ManifestId", str)
 
 
 class VersionsMappingFile(TypedDict):
-  apps: list[VersionsMappingApp]
+  apps: dict[AppName, VersionsMappingApp]
 
 
 class VersionsMappingApp(TypedDict):
@@ -37,7 +42,7 @@ def main() -> None:
 
   db_connection: sqlite3.Connection = manifest_downloader.connect_to_database()
   with db_connection, contextlib.closing(db_connection.cursor()) as db_cursor:
-    for app in versions_mapping_data["apps"]:
+    for app in versions_mapping_data["apps"].values():
       mapped_manifests: set[tuple[int, int]] = set()
       for version_branches in app["versions"].values():
         for branch_manifests in version_branches.values():

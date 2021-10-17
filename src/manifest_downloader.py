@@ -2,8 +2,7 @@ from __future__ import annotations
 
 import gevent.monkey
 
-gevent.monkey.patch_socket()
-gevent.monkey.patch_ssl()
+gevent.monkey.patch_all()
 
 import argparse
 import contextlib

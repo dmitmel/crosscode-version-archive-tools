@@ -10,6 +10,7 @@ python = "^3.8"
 PyYAML = "^5.4.1"
 steam = {extras = ["client"], version = "^1.2.0"}
 typing-extensions = "^3.10.0"
+mwclient = "^0.10.1"
 
 [tool.poetry.dev-dependencies]
 pyright = "^0.0.10"
