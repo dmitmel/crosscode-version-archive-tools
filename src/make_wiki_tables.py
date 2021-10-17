@@ -126,12 +126,16 @@ def main() -> None:
               depot_name,
               (version_num, manifest_id if isinstance(manifest_id, list) else [manifest_id])
             )
-        branch_manifests_count = sum(len(ids) for _, ids in branch_latest_manifests.values())
 
         last_row = table.row_count()
-        table.put(last_row, 0, render_branch_name(branch_name), rowspan=branch_manifests_count)
         table.put(
-          last_row, 1, esc(BRANCHES_INFO.get(branch_name, "")), rowspan=branch_manifests_count
+          last_row, 0, render_branch_name(branch_name), rowspan=len(branch_latest_manifests)
+        )
+        table.put(
+          last_row,
+          1,
+          esc(BRANCHES_INFO.get(branch_name, "")),
+          rowspan=len(branch_latest_manifests)
         )
 
         for i, (depot, (version, manifest_ids)) in enumerate(branch_latest_manifests.items()):
@@ -139,13 +143,12 @@ def main() -> None:
           table.put(
             last_row + i, 2, f"{render_depot_id(depot_id)} {esc(DEPOTS_INFO.get(depot_id, ''))}"
           )
-
-          for j, manifest_id in enumerate(manifest_ids):
-            manifest_id = int(manifest_id)
-            table.put(
-              last_row + i + j, 3,
-              f"{render_manifest_id(depot_id, manifest_id)} {render_version(version)}"
+          table.put(
+            last_row + i, 3, "<br>".join(
+              f"{render_manifest_id(depot_id, int(manifest_id))} {render_version(version)}"
+              for manifest_id in manifest_ids
             )
+          )
 
       table.render_to_html(output_doc)
 
@@ -258,6 +261,10 @@ class TableBuilder:
     return sum(map(len, self.cells))
 
   def render_to_html(self, output: IO[str]) -> None:
+    for row_cells in self.cells:
+      for cell in row_cells:
+        cell.already_rendered = False
+
     for row_idx, row_cells in enumerate(self.cells):
       output.write("<tr>\n")
 
