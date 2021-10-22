@@ -64,7 +64,9 @@ def main() -> None:
 
   subparser = subparsers.add_parser("export", help="")
   subparser.set_defaults(func=cmd_export_manifests)
-  subparser.add_argument("--output", "-o", required=True)
+  subparser.add_argument(
+    "--output", "-o", default=os.path.join(PROJECT_DIR, 'data', 'exported_manifests')
+  )
 
   args = parser.parse_args()
   args.func(args)
