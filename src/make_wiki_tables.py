@@ -172,7 +172,7 @@ def main() -> None:
 
         output_doc.write("<tr><th><em>Depot</em></th>")
         for depot_id in depot_names:
-          depot_id = int(crosscode_app["depots"][DepotName(depot_name)])
+          depot_id = int(crosscode_app["depots"][DepotName(depot_id)])
           output_doc.write(f"<th>{render_depot_id(depot_id)}</th>")
         output_doc.write("<th></th></tr>\n")
 

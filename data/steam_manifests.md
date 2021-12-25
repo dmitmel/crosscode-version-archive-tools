@@ -249,7 +249,7 @@
 <table><thead>
 <tr><th>Version</th><th>Manifest Windows32</th><th>Manifest Linux32</th><th>Manifest Linux64</th><th>Manifest macOS</th><th>Manifest Windows64</th><th>Uploaded at (YYYY/MM/DD hh:mm:ss) UTC</th></tr>
 </thead><tbody>
-<tr><th><em>Depot</em></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th></th></tr>
+<tr><th><em>Depot</em></th><th><a href="https://steamdb.info/depot/368341/"><code>368341</code></a></th><th><a href="https://steamdb.info/depot/368342/"><code>368342</code></a></th><th><a href="https://steamdb.info/depot/368343/"><code>368343</code></a></th><th><a href="https://steamdb.info/depot/368344/"><code>368344</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th></th></tr>
 <tr>
 <td>1.4.2-1</td>
 <td><a href="exported_manifests/368340/368341/601808047324871280.txt"><code>601808047324871280</code></a></td>
@@ -1292,7 +1292,7 @@
 <table><thead>
 <tr><th>Version</th><th>Manifest Windows32</th><th>Manifest Linux32</th><th>Manifest Linux64</th><th>Manifest macOS</th><th>Manifest Windows64</th><th>Uploaded at (YYYY/MM/DD hh:mm:ss) UTC</th></tr>
 </thead><tbody>
-<tr><th><em>Depot</em></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th></th></tr>
+<tr><th><em>Depot</em></th><th><a href="https://steamdb.info/depot/368341/"><code>368341</code></a></th><th><a href="https://steamdb.info/depot/368342/"><code>368342</code></a></th><th><a href="https://steamdb.info/depot/368343/"><code>368343</code></a></th><th><a href="https://steamdb.info/depot/368344/"><code>368344</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th></th></tr>
 <tr>
 <td>1.4.2-1</td>
 <td><a href="exported_manifests/368340/368341/3662807210253930856.txt"><code>3662807210253930856</code></a></td>
@@ -1651,7 +1651,7 @@
 <table><thead>
 <tr><th>Version</th><th>Manifest Windows32</th><th>Manifest Linux32</th><th>Manifest Linux64</th><th>Manifest macOS</th><th>Manifest Windows64</th><th>Uploaded at (YYYY/MM/DD hh:mm:ss) UTC</th></tr>
 </thead><tbody>
-<tr><th><em>Depot</em></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th></th></tr>
+<tr><th><em>Depot</em></th><th><a href="https://steamdb.info/depot/368341/"><code>368341</code></a></th><th><a href="https://steamdb.info/depot/368342/"><code>368342</code></a></th><th><a href="https://steamdb.info/depot/368343/"><code>368343</code></a></th><th><a href="https://steamdb.info/depot/368344/"><code>368344</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th></th></tr>
 <tr>
 <td><a href="https://crosscode.fandom.com/Version_history#1.0.0:_Completed">1.0.0-10</a></td>
 <td><a href="exported_manifests/368340/368341/2091331756459634727.txt"><code>2091331756459634727</code></a></td>
