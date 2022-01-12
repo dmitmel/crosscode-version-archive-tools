@@ -91,7 +91,11 @@ def cmd_update_database(args: argparse.Namespace) -> None:
         ))
 
   auth_secrets_dir = os.path.join(PROJECT_DIR, "data", "steam_auth")
-  os.chmod(auth_secrets_dir, 0o700)
+  auth_secrets_dir_mode = 0o700
+  try:
+    os.mkdir(auth_secrets_dir, mode=auth_secrets_dir_mode)
+  except FileExistsError:
+    os.chmod(auth_secrets_dir, auth_secrets_dir_mode)
   with MySteamClient() as client:
     client.set_credential_location(auth_secrets_dir)
     client.username = cast(str, input_manifests_data.get("username"))
