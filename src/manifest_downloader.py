@@ -223,6 +223,12 @@ def export_single_manifest(
   <https://github.com/SteamRE/DepotDownloader/blob/DepotDownloader_2.4.4/DepotDownloader/ContentDownloader.cs#L1339-L1372>.
   """
 
+  created_at = 0
+  seen_by_steamdb_at = 0
+  original_size = 0
+  compressed_size = 0
+  files = []
+
   with db_connection, contextlib.closing(db_connection.cursor()) as db_cursor:
     if manifest_id is None:
       result: sqlite3.Row = db_cursor.execute(
