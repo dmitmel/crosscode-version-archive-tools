@@ -38,7 +38,7 @@
     git add --all
     git commit -m "$version"
     git tag "$version"
-    git push && git push --tags
+    git push origin master "$version"
     sync
     ```
     (at the time of writing the version of Prettier is 2.4.1)

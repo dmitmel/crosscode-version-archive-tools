@@ -5,15 +5,14 @@ for (method in console) {
   }
 }
 console.log(
-  $("#manifests table tr")
-    .map((idx, tr) => {
-      let tds = $(tr).find("td");
+  Array.from(document.querySelectorAll('#manifests table > tbody > tr'))
+    .map((tr) => {
+      let tds = tr.querySelectorAll('td');
       return tds.length > 0
         ? `- \{ id: "${tds[2].innerText}", seen: ${Math.floor(
-            new Date(tds[1].dataset.time).getTime() / 1000
+            new Date(tds[1].dataset.time).getTime() / 1000,
           )} \}`
         : null;
     })
-    .toArray()
-    .join("\n")
+    .join('\n'),
 );
