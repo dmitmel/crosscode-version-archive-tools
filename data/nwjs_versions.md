@@ -42,6 +42,7 @@ The `nwjs_new` branch has always been on [0.30.5][nw0.30.5].
 | 1.0.0-1      | [0.14.5][nw0.14.5]       | downgraded                 |                 |
 | 1.0.1        | [0.30.5][nw0.30.5]       | upgraded back              | [link][rfg6493] |
 | 1.2.0-5      | [0.35.5][nw0.35.5]       | upgraded                   | [link][rfg6904] |
+| 1.4.2-2      | [0.63.1][nw0.63.1]       | upgraded                   |                 |
 
 The `nwjs_old` branch has always been on [0.14.5][nw0.14.5].
 
@@ -211,6 +212,33 @@ The `nwjs_new` branch has always been on [0.30.5][nw0.30.5].
 }
 ```
 
+### v0.63.1
+
+[Download page][nw0.63.1]
+
+```json
+{
+  "node": "17.8.0",
+  "v8": "10.0.139.15",
+  "uv": "1.43.0",
+  "zlib": "1.2.11",
+  "brotli": "1.0.9",
+  "ares": "1.18.1",
+  "modules": "102",
+  "nghttp2": "1.47.0",
+  "napi": "8",
+  "llhttp": "6.0.4",
+  "openssl": "3.0.2+quic",
+  "icu": "70.1",
+  "unicode": "14.0",
+  "nw": "0.63.1",
+  "node-webkit": "0.63.1",
+  "nw-commit-id": "db6c6a7-29d2f39-e46a141-39a2416",
+  "nw-flavor": "normal",
+  "chromium": "100.0.4896.127"
+}
+```
+
 [rfg3574]: http://www.radicalfishgames.com/?p=3574
 [rfg4274]: http://www.radicalfishgames.com/?p=4274
 [rfg4759]: http://www.radicalfishgames.com/?p=4759
@@ -226,3 +254,4 @@ The `nwjs_new` branch has always been on [0.30.5][nw0.30.5].
 [nw0.30.5]: https://dl.nwjs.io/v0.30.5/
 [nw0.35.5]: https://dl.nwjs.io/v0.35.5/
 [nw0.50.3]: https://dl.nwjs.io/v0.50.3/
+[nw0.63.1]: https://dl.nwjs.io/v0.63.1/

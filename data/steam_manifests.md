@@ -80,11 +80,11 @@
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/368342/"><code>368342</code></a> Linux32</td>
-<td><a href="exported_manifests/368340/368342/3793510714280845667.txt"><code>3793510714280845667</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
+<td><a href="exported_manifests/368340/368342/3793510714280845667.txt"><code>3793510714280845667</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a><br><a href="exported_manifests/368340/368342/531239374263128089.txt"><code>531239374263128089</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/368343/"><code>368343</code></a> Linux64</td>
-<td><a href="exported_manifests/368340/368343/6958719452362740705.txt"><code>6958719452362740705</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
+<td><a href="exported_manifests/368340/368343/6958719452362740705.txt"><code>6958719452362740705</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a><br><a href="exported_manifests/368340/368343/9068403569528715727.txt"><code>9068403569528715727</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/368344/"><code>368344</code></a> macOS</td>
@@ -253,8 +253,8 @@
 <tr>
 <td><a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
 <td><a href="exported_manifests/368340/368341/2192574251112456041.txt"><code>2192574251112456041</code></a></td>
-<td><a href="exported_manifests/368340/368342/3793510714280845667.txt"><code>3793510714280845667</code></a></td>
-<td><a href="exported_manifests/368340/368343/6958719452362740705.txt"><code>6958719452362740705</code></a></td>
+<td><a href="exported_manifests/368340/368342/3793510714280845667.txt"><code>3793510714280845667</code></a><br><a href="exported_manifests/368340/368342/531239374263128089.txt"><code>531239374263128089</code></a></td>
+<td><a href="exported_manifests/368340/368343/6958719452362740705.txt"><code>6958719452362740705</code></a><br><a href="exported_manifests/368340/368343/9068403569528715727.txt"><code>9068403569528715727</code></a></td>
 <td><a href="exported_manifests/368340/368344/6562401501775871361.txt"><code>6562401501775871361</code></a></td>
 <td><a href="exported_manifests/368340/368349/8210158746658651301.txt"><code>8210158746658651301</code></a></td>
 <td>2022/04/19 17:09:49</td>
