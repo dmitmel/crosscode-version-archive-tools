@@ -104,7 +104,7 @@ def main() -> None:
       output_doc.write("</thead><tbody>\n")
 
       table = TableBuilder()
-      for i, (depot_name, depot_id) in enumerate(crosscode_app["depots"].items()):
+      for i, (_depot_name, depot_id) in enumerate(crosscode_app["depots"].items()):
         depot_id = int(depot_id)
         table.put(i, 0, render_depot_id(depot_id))
         table.put(i, 1, esc(DEPOTS_INFO.get(depot_id, "")))

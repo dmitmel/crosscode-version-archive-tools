@@ -76,35 +76,35 @@
 <td rowspan="12"><code>public</code></td>
 <td rowspan="12">&lt;the default branch&gt;</td>
 <td><a href="https://steamdb.info/depot/368341/"><code>368341</code></a> Windows32</td>
-<td><a href="exported_manifests/368340/368341/2192574251112456041.txt"><code>2192574251112456041</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
+<td><a href="exported_manifests/368340/368341/3927393019217881865.txt"><code>3927393019217881865</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-3</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/368342/"><code>368342</code></a> Linux32</td>
-<td><a href="exported_manifests/368340/368342/3793510714280845667.txt"><code>3793510714280845667</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a><br><a href="exported_manifests/368340/368342/531239374263128089.txt"><code>531239374263128089</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
+<td><a href="exported_manifests/368340/368342/4827934404552640655.txt"><code>4827934404552640655</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-3</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/368343/"><code>368343</code></a> Linux64</td>
-<td><a href="exported_manifests/368340/368343/6958719452362740705.txt"><code>6958719452362740705</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a><br><a href="exported_manifests/368340/368343/9068403569528715727.txt"><code>9068403569528715727</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
+<td><a href="exported_manifests/368340/368343/1605626617428248393.txt"><code>1605626617428248393</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-3</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/368344/"><code>368344</code></a> macOS</td>
-<td><a href="exported_manifests/368340/368344/6562401501775871361.txt"><code>6562401501775871361</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
-</tr>
-<tr>
-<td><a href="https://steamdb.info/depot/368349/"><code>368349</code></a> Windows64</td>
-<td><a href="exported_manifests/368340/368349/8210158746658651301.txt"><code>8210158746658651301</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
-</tr>
-<tr>
-<td><a href="https://steamdb.info/depot/1517030/"><code>1517030</code></a> A New Home DLC</td>
-<td><a href="exported_manifests/368340/1517030/6194753511006390430.txt"><code>6194753511006390430</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
-</tr>
-<tr>
-<td><a href="https://steamdb.info/depot/1517031/"><code>1517031</code></a> A New Home DLC (macOS)</td>
-<td><a href="exported_manifests/368340/1517031/638083738015388850.txt"><code>638083738015388850</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
+<td><a href="exported_manifests/368340/368344/484362191249278720.txt"><code>484362191249278720</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-3</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/368345/"><code>368345</code></a> Chinese Windows32</td>
-<td><a href="exported_manifests/368340/368345/1034138281125250630.txt"><code>1034138281125250630</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
+<td><a href="exported_manifests/368340/368345/7374927339918629983.txt"><code>7374927339918629983</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-3</a></td>
+</tr>
+<tr>
+<td><a href="https://steamdb.info/depot/368349/"><code>368349</code></a> Windows64</td>
+<td><a href="exported_manifests/368340/368349/6897918957549066317.txt"><code>6897918957549066317</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-3</a></td>
+</tr>
+<tr>
+<td><a href="https://steamdb.info/depot/1517030/"><code>1517030</code></a> A New Home DLC</td>
+<td><a href="exported_manifests/368340/1517030/4342177751486568372.txt"><code>4342177751486568372</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-3</a></td>
+</tr>
+<tr>
+<td><a href="https://steamdb.info/depot/1517031/"><code>1517031</code></a> A New Home DLC (macOS)</td>
+<td><a href="exported_manifests/368340/1517031/1497618732334206285.txt"><code>1497618732334206285</code></a> <a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-3</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/1585790/"><code>1585790</code></a> Manlea DLC</td>
@@ -194,35 +194,35 @@
 <td rowspan="8"><code>speedrunner</code></td>
 <td rowspan="8"></td>
 <td><a href="https://steamdb.info/depot/368341/"><code>368341</code></a> Windows32</td>
-<td><a href="exported_manifests/368340/368341/3980115939652872606.txt"><code>3980115939652872606</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2-2</a></td>
+<td><a href="exported_manifests/368340/368341/3980115939652872606.txt"><code>3980115939652872606</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2-2</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/368342/"><code>368342</code></a> Linux32</td>
-<td><a href="exported_manifests/368340/368342/1901118165550054582.txt"><code>1901118165550054582</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2-2</a></td>
+<td><a href="exported_manifests/368340/368342/1901118165550054582.txt"><code>1901118165550054582</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2-2</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/368343/"><code>368343</code></a> Linux64</td>
-<td><a href="exported_manifests/368340/368343/7253983787566467470.txt"><code>7253983787566467470</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2-2</a></td>
+<td><a href="exported_manifests/368340/368343/7253983787566467470.txt"><code>7253983787566467470</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2-2</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/368344/"><code>368344</code></a> macOS</td>
-<td><a href="exported_manifests/368340/368344/706141931606316835.txt"><code>706141931606316835</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2-2</a></td>
+<td><a href="exported_manifests/368340/368344/706141931606316835.txt"><code>706141931606316835</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2-2</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/368349/"><code>368349</code></a> Windows64</td>
-<td><a href="exported_manifests/368340/368349/7830083108386638659.txt"><code>7830083108386638659</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2-2</a></td>
+<td><a href="exported_manifests/368340/368349/7830083108386638659.txt"><code>7830083108386638659</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2-2</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/960310/"><code>960310</code></a> Ninja Skin DLC</td>
-<td><a href="exported_manifests/368340/960310/1819462255576140614.txt"><code>1819462255576140614</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2-2</a></td>
+<td><a href="exported_manifests/368340/960310/1819462255576140614.txt"><code>1819462255576140614</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2-2</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/916191/"><code>916191</code></a> Ninja Skin DLC (macOS)</td>
-<td><a href="exported_manifests/368340/916191/3498473320616428612.txt"><code>3498473320616428612</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2-2</a></td>
+<td><a href="exported_manifests/368340/916191/3498473320616428612.txt"><code>3498473320616428612</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2-2</a></td>
 </tr>
 <tr>
 <td><a href="https://steamdb.info/depot/368345/"><code>368345</code></a> Chinese Windows32</td>
-<td><a href="exported_manifests/368340/368345/4954201910177673885.txt"><code>4954201910177673885</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2-2</a></td>
+<td><a href="exported_manifests/368340/368345/4954201910177673885.txt"><code>4954201910177673885</code></a> <a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2-2</a></td>
 </tr>
 <tr>
 <td rowspan="4"><code>aprilfools2016</code></td>
@@ -250,6 +250,15 @@
 <tr><th>Version</th><th>Manifest Windows32</th><th>Manifest Linux32</th><th>Manifest Linux64</th><th>Manifest macOS</th><th>Manifest Windows64</th><th>Uploaded at (YYYY/MM/DD hh:mm:ss) UTC</th></tr>
 </thead><tbody>
 <tr><th><em>Depot</em></th><th><a href="https://steamdb.info/depot/368341/"><code>368341</code></a></th><th><a href="https://steamdb.info/depot/368342/"><code>368342</code></a></th><th><a href="https://steamdb.info/depot/368343/"><code>368343</code></a></th><th><a href="https://steamdb.info/depot/368344/"><code>368344</code></a></th><th><a href="https://steamdb.info/depot/368349/"><code>368349</code></a></th><th></th></tr>
+<tr>
+<td><a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-3</a></td>
+<td><a href="exported_manifests/368340/368341/3927393019217881865.txt"><code>3927393019217881865</code></a></td>
+<td><a href="exported_manifests/368340/368342/4827934404552640655.txt"><code>4827934404552640655</code></a></td>
+<td><a href="exported_manifests/368340/368343/1605626617428248393.txt"><code>1605626617428248393</code></a></td>
+<td><a href="exported_manifests/368340/368344/484362191249278720.txt"><code>484362191249278720</code></a></td>
+<td><a href="exported_manifests/368340/368349/6897918957549066317.txt"><code>6897918957549066317</code></a></td>
+<td>2023/06/10 11:43:26</td>
+</tr>
 <tr>
 <td><a href="https://crosscode.fandom.com/Version_history#1.4.2:_3rd_Anniversary_Gift">1.4.2-2</a></td>
 <td><a href="exported_manifests/368340/368341/2192574251112456041.txt"><code>2192574251112456041</code></a></td>
@@ -386,7 +395,7 @@
 <td>2021/02/26 17:43:28</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest.21">1.3.0-4</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest!">1.3.0-4</a></td>
 <td><a href="exported_manifests/368340/368341/6335057591618642609.txt"><code>6335057591618642609</code></a></td>
 <td><a href="exported_manifests/368340/368342/468414865309751332.txt"><code>468414865309751332</code></a></td>
 <td><a href="exported_manifests/368340/368343/5550559972472595961.txt"><code>5550559972472595961</code></a></td>
@@ -395,7 +404,7 @@
 <td>2020/07/30 12:15:43</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest.21">1.3.0-3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest!">1.3.0-3</a></td>
 <td><a href="exported_manifests/368340/368341/2055162144920812162.txt"><code>2055162144920812162</code></a></td>
 <td><a href="exported_manifests/368340/368342/7810568616120563172.txt"><code>7810568616120563172</code></a></td>
 <td><a href="exported_manifests/368340/368343/5935581322703667786.txt"><code>5935581322703667786</code></a></td>
@@ -404,7 +413,7 @@
 <td>2020/07/15 19:14:02</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest.21">1.3.0-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest!">1.3.0-2</a></td>
 <td><a href="exported_manifests/368340/368341/8228846300434450745.txt"><code>8228846300434450745</code></a></td>
 <td><a href="exported_manifests/368340/368342/5032441203241077402.txt"><code>5032441203241077402</code></a></td>
 <td><a href="exported_manifests/368340/368343/6577541115375399620.txt"><code>6577541115375399620</code></a></td>
@@ -413,7 +422,7 @@
 <td>2020/07/12 13:01:58</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest.21">1.3.0-1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest!">1.3.0-1</a></td>
 <td><a href="exported_manifests/368340/368341/4850671666901002073.txt"><code>4850671666901002073</code></a></td>
 <td><a href="exported_manifests/368340/368342/54979055409454409.txt"><code>54979055409454409</code></a></td>
 <td><a href="exported_manifests/368340/368343/1022079677597415784.txt"><code>1022079677597415784</code></a></td>
@@ -422,7 +431,7 @@
 <td>2020/07/10 21:04:00</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest.21">1.3.0</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest!">1.3.0</a></td>
 <td><a href="exported_manifests/368340/368341/8586812514233951269.txt"><code>8586812514233951269</code></a></td>
 <td><a href="exported_manifests/368340/368342/6522939009135841597.txt"><code>6522939009135841597</code></a></td>
 <td><a href="exported_manifests/368340/368343/8757035988626814944.txt"><code>8757035988626814944</code></a></td>
@@ -431,7 +440,7 @@
 <td>2020/07/10 15:08:21</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game.2B_is_out.21">1.2.0-5</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game+_is_out!">1.2.0-5</a></td>
 <td><a href="exported_manifests/368340/368341/3119360291371788415.txt"><code>3119360291371788415</code></a></td>
 <td><a href="exported_manifests/368340/368342/4757330461930669343.txt"><code>4757330461930669343</code></a></td>
 <td><a href="exported_manifests/368340/368343/5955843837162243083.txt"><code>5955843837162243083</code></a></td>
@@ -440,7 +449,7 @@
 <td>2019/12/18 11:39:45</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game.2B_is_out.21">1.2.0-4</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game+_is_out!">1.2.0-4</a></td>
 <td><a href="exported_manifests/368340/368341/3344124384814359337.txt"><code>3344124384814359337</code></a></td>
 <td><a href="exported_manifests/368340/368342/7436503467503604313.txt"><code>7436503467503604313</code></a></td>
 <td><a href="exported_manifests/368340/368343/5154694336188985705.txt"><code>5154694336188985705</code></a></td>
@@ -449,7 +458,7 @@
 <td>2019/09/20 19:56:50</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game.2B_is_out.21">1.2.0-3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game+_is_out!">1.2.0-3</a></td>
 <td><a href="exported_manifests/368340/368341/2093985541945832996.txt"><code>2093985541945832996</code></a></td>
 <td><a href="exported_manifests/368340/368342/5133393693128149427.txt"><code>5133393693128149427</code></a></td>
 <td><a href="exported_manifests/368340/368343/9011606931941154779.txt"><code>9011606931941154779</code></a></td>
@@ -458,7 +467,7 @@
 <td>2019/09/16 23:18:58</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game.2B_is_out.21">1.2.0-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game+_is_out!">1.2.0-2</a></td>
 <td><a href="exported_manifests/368340/368341/8337318589352404796.txt"><code>8337318589352404796</code></a></td>
 <td><a href="exported_manifests/368340/368342/3849585636869147835.txt"><code>3849585636869147835</code></a></td>
 <td><a href="exported_manifests/368340/368343/3186673485833686748.txt"><code>3186673485833686748</code></a></td>
@@ -467,7 +476,7 @@
 <td>2019/09/13 22:46:50</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game.2B_is_out.21">1.2.0-1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game+_is_out!">1.2.0-1</a></td>
 <td><a href="exported_manifests/368340/368341/8720657601413298234.txt"><code>8720657601413298234</code></a></td>
 <td><a href="exported_manifests/368340/368342/2242170150168664113.txt"><code>2242170150168664113</code></a></td>
 <td><a href="exported_manifests/368340/368343/708495132517287764.txt"><code>708495132517287764</code></a></td>
@@ -476,7 +485,7 @@
 <td>2019/09/13 20:30:19</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game.2B_is_out.21">1.2.0</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game+_is_out!">1.2.0</a></td>
 <td><a href="exported_manifests/368340/368341/698232535568189230.txt"><code>698232535568189230</code></a></td>
 <td><a href="exported_manifests/368340/368342/1375481226271900786.txt"><code>1375481226271900786</code></a></td>
 <td><a href="exported_manifests/368340/368343/4752092406327555871.txt"><code>4752092406327555871</code></a></td>
@@ -485,7 +494,7 @@
 <td>2019/09/13 14:57:50</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_.26_Pets_.26_Quests">1.1.0-3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_&amp;_Pets_&amp;_Quests">1.1.0-3</a></td>
 <td><a href="exported_manifests/368340/368341/3613959795902897611.txt"><code>3613959795902897611</code></a></td>
 <td><a href="exported_manifests/368340/368342/6479603162142137154.txt"><code>6479603162142137154</code></a></td>
 <td><a href="exported_manifests/368340/368343/6081537025208399780.txt"><code>6081537025208399780</code></a></td>
@@ -494,7 +503,7 @@
 <td>2019/05/16 18:02:18</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_.26_Pets_.26_Quests">1.1.0-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_&amp;_Pets_&amp;_Quests">1.1.0-2</a></td>
 <td><a href="exported_manifests/368340/368341/3786515361386018984.txt"><code>3786515361386018984</code></a></td>
 <td><a href="exported_manifests/368340/368342/1287159815560800469.txt"><code>1287159815560800469</code></a></td>
 <td><a href="exported_manifests/368340/368343/7711182297321889238.txt"><code>7711182297321889238</code></a></td>
@@ -503,7 +512,7 @@
 <td>2019/05/16 13:31:04</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_.26_Pets_.26_Quests">1.1.0-1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_&amp;_Pets_&amp;_Quests">1.1.0-1</a></td>
 <td><a href="exported_manifests/368340/368341/7572157371629674456.txt"><code>7572157371629674456</code></a></td>
 <td><a href="exported_manifests/368340/368342/1770868604069073352.txt"><code>1770868604069073352</code></a></td>
 <td><a href="exported_manifests/368340/368343/5700741940935612136.txt"><code>5700741940935612136</code></a></td>
@@ -512,7 +521,7 @@
 <td>2019/05/15 22:29:22</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_.26_Pets_.26_Quests">1.1.0</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_&amp;_Pets_&amp;_Quests">1.1.0</a></td>
 <td><a href="exported_manifests/368340/368341/1612110665072245253.txt"><code>1612110665072245253</code></a></td>
 <td><a href="exported_manifests/368340/368342/7640739867120077496.txt"><code>7640739867120077496</code></a></td>
 <td><a href="exported_manifests/368340/368343/3729742118138008325.txt"><code>3729742118138008325</code></a></td>
@@ -521,7 +530,7 @@
 <td>2019/05/15 14:41:12</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_.26_NPC_Dialogs">1.0.3-4</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_&amp;_NPC_Dialogs">1.0.3-4</a></td>
 <td><a href="exported_manifests/368340/368341/4891350796890904886.txt"><code>4891350796890904886</code></a></td>
 <td><a href="exported_manifests/368340/368342/9208229884238743293.txt"><code>9208229884238743293</code></a></td>
 <td><a href="exported_manifests/368340/368343/6596666334754279499.txt"><code>6596666334754279499</code></a></td>
@@ -530,7 +539,7 @@
 <td>2019/04/02 12:55:04</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_.26_NPC_Dialogs">1.0.3-3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_&amp;_NPC_Dialogs">1.0.3-3</a></td>
 <td><a href="exported_manifests/368340/368341/2600855840923989138.txt"><code>2600855840923989138</code></a></td>
 <td><a href="exported_manifests/368340/368342/7504121611606373253.txt"><code>7504121611606373253</code></a></td>
 <td><a href="exported_manifests/368340/368343/3050620422084189688.txt"><code>3050620422084189688</code></a></td>
@@ -539,7 +548,7 @@
 <td>2019/04/01 06:38:14</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_.26_NPC_Dialogs">1.0.3-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_&amp;_NPC_Dialogs">1.0.3-2</a></td>
 <td><a href="exported_manifests/368340/368341/511636910483988747.txt"><code>511636910483988747</code></a></td>
 <td><a href="exported_manifests/368340/368342/4931538934683529323.txt"><code>4931538934683529323</code></a></td>
 <td><a href="exported_manifests/368340/368343/6259254838101001508.txt"><code>6259254838101001508</code></a></td>
@@ -548,7 +557,7 @@
 <td>2019/02/01 13:19:44</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_.26_NPC_Dialogs">1.0.3-1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_&amp;_NPC_Dialogs">1.0.3-1</a></td>
 <td><a href="exported_manifests/368340/368341/2306314111431802376.txt"><code>2306314111431802376</code></a></td>
 <td><a href="exported_manifests/368340/368342/9033917476808804033.txt"><code>9033917476808804033</code></a></td>
 <td><a href="exported_manifests/368340/368343/7206542164785909380.txt"><code>7206542164785909380</code></a></td>
@@ -557,7 +566,7 @@
 <td>2019/01/31 22:00:43</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_.26_NPC_Dialogs">1.0.3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_&amp;_NPC_Dialogs">1.0.3</a></td>
 <td><a href="exported_manifests/368340/368341/3677669684004581690.txt"><code>3677669684004581690</code></a></td>
 <td><a href="exported_manifests/368340/368342/7831606250886842926.txt"><code>7831606250886842926</code></a></td>
 <td><a href="exported_manifests/368340/368343/4832759132037313320.txt"><code>4832759132037313320</code></a></td>
@@ -566,7 +575,7 @@
 <td>2019/01/31 15:51:04</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2-2</a></td>
 <td><a href="exported_manifests/368340/368341/3992876240740113053.txt"><code>3992876240740113053</code></a></td>
 <td><a href="exported_manifests/368340/368342/5416711491264008401.txt"><code>5416711491264008401</code></a></td>
 <td><a href="exported_manifests/368340/368343/5623544131209670930.txt"><code>5623544131209670930</code></a></td>
@@ -575,7 +584,7 @@
 <td>2018/11/28 13:59:41</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2-1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2-1</a></td>
 <td><a href="exported_manifests/368340/368341/1026896651292495568.txt"><code>1026896651292495568</code></a></td>
 <td><a href="exported_manifests/368340/368342/7920858072491842216.txt"><code>7920858072491842216</code></a></td>
 <td><a href="exported_manifests/368340/368343/2553638417192945674.txt"><code>2553638417192945674</code></a></td>
@@ -584,7 +593,7 @@
 <td>2018/11/27 22:33:43</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2</a></td>
 <td><a href="exported_manifests/368340/368341/5967315527766435449.txt"><code>5967315527766435449</code></a></td>
 <td><a href="exported_manifests/368340/368342/4071354165674361628.txt"><code>4071354165674361628</code></a></td>
 <td><a href="exported_manifests/368340/368343/1163536024792375495.txt"><code>1163536024792375495</code></a></td>
@@ -710,7 +719,7 @@
 <td>2018/09/20 18:00:40</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_.2B_Languages.21">0.9.8-8</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_+_Languages!">0.9.8-8</a></td>
 <td><a href="exported_manifests/368340/368341/8982805754876053555.txt"><code>8982805754876053555</code></a></td>
 <td><a href="exported_manifests/368340/368342/2004275809437467470.txt"><code>2004275809437467470</code></a></td>
 <td><a href="exported_manifests/368340/368343/4147618757329322298.txt"><code>4147618757329322298</code></a></td>
@@ -719,7 +728,7 @@
 <td>2018/09/07 14:40:46</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_.2B_Languages.21">0.9.8-7</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_+_Languages!">0.9.8-7</a></td>
 <td><a href="exported_manifests/368340/368341/4722135540398576738.txt"><code>4722135540398576738</code></a></td>
 <td><a href="exported_manifests/368340/368342/4005753246245285727.txt"><code>4005753246245285727</code></a></td>
 <td><a href="exported_manifests/368340/368343/1558168978559224185.txt"><code>1558168978559224185</code></a></td>
@@ -728,7 +737,7 @@
 <td>2018/04/30 15:47:40</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_.2B_Languages.21">0.9.8-6</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_+_Languages!">0.9.8-6</a></td>
 <td><a href="exported_manifests/368340/368341/6832373205136048918.txt"><code>6832373205136048918</code></a></td>
 <td><a href="exported_manifests/368340/368342/8034250000262854121.txt"><code>8034250000262854121</code></a></td>
 <td><a href="exported_manifests/368340/368343/8315026870323581303.txt"><code>8315026870323581303</code></a></td>
@@ -737,7 +746,7 @@
 <td>2018/01/14 21:18:57</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_.2B_Languages.21">0.9.8-5</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_+_Languages!">0.9.8-5</a></td>
 <td><a href="exported_manifests/368340/368341/1554149031040626548.txt"><code>1554149031040626548</code></a></td>
 <td><a href="exported_manifests/368340/368342/7607349481740036221.txt"><code>7607349481740036221</code></a></td>
 <td><a href="exported_manifests/368340/368343/454330919732659206.txt"><code>454330919732659206</code></a></td>
@@ -746,7 +755,7 @@
 <td>2018/01/08 14:29:31</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_.2B_Languages.21">0.9.8-4</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_+_Languages!">0.9.8-4</a></td>
 <td><a href="exported_manifests/368340/368341/2579913519299069809.txt"><code>2579913519299069809</code></a></td>
 <td><a href="exported_manifests/368340/368342/8089480688938139335.txt"><code>8089480688938139335</code></a></td>
 <td><a href="exported_manifests/368340/368343/6902466619752236785.txt"><code>6902466619752236785</code></a></td>
@@ -755,7 +764,7 @@
 <td>2018/01/07 12:17:00</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_.2B_Languages.21">0.9.8-3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_+_Languages!">0.9.8-3</a></td>
 <td><a href="exported_manifests/368340/368341/7518716483313180995.txt"><code>7518716483313180995</code></a></td>
 <td><a href="exported_manifests/368340/368342/3387292664254881397.txt"><code>3387292664254881397</code></a></td>
 <td><a href="exported_manifests/368340/368343/5639582414447479095.txt"><code>5639582414447479095</code></a></td>
@@ -764,7 +773,7 @@
 <td>2018/01/06 17:05:30</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_.2B_Languages.21">0.9.8-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_+_Languages!">0.9.8-2</a></td>
 <td><a href="exported_manifests/368340/368341/7632113659277297034.txt"><code>7632113659277297034</code></a></td>
 <td><a href="exported_manifests/368340/368342/6531295680473010437.txt"><code>6531295680473010437</code></a></td>
 <td><a href="exported_manifests/368340/368343/4354998514560207187.txt"><code>4354998514560207187</code></a></td>
@@ -773,7 +782,7 @@
 <td>2017/12/15 20:01:37</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_.2B_Languages.21">0.9.8-1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_+_Languages!">0.9.8-1</a></td>
 <td><a href="exported_manifests/368340/368341/2622308088036368303.txt"><code>2622308088036368303</code></a></td>
 <td><a href="exported_manifests/368340/368342/6501501044020972792.txt"><code>6501501044020972792</code></a></td>
 <td><a href="exported_manifests/368340/368343/7806382800111983324.txt"><code>7806382800111983324</code></a></td>
@@ -782,7 +791,7 @@
 <td>2017/12/14 23:19:44</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_.2B_Languages.21">0.9.8</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.8:_More_Arts_+_Languages!">0.9.8</a></td>
 <td><a href="exported_manifests/368340/368341/6144344771688766523.txt"><code>6144344771688766523</code></a></td>
 <td><a href="exported_manifests/368340/368342/2663858256348534471.txt"><code>2663858256348534471</code></a></td>
 <td><a href="exported_manifests/368340/368343/5810635766134051842.txt"><code>5810635766134051842</code></a></td>
@@ -836,7 +845,7 @@
 <td>2017/10/13 16:06:39</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.5:_The_Story_Continues.21">0.9.5-5</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.5:_The_Story_Continues!">0.9.5-5</a></td>
 <td><a href="exported_manifests/368340/368341/777670493696015402.txt"><code>777670493696015402</code></a></td>
 <td><a href="exported_manifests/368340/368342/991387746800088637.txt"><code>991387746800088637</code></a></td>
 <td><a href="exported_manifests/368340/368343/6897299147461292831.txt"><code>6897299147461292831</code></a></td>
@@ -845,7 +854,7 @@
 <td>2017/07/11 18:31:18</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.5:_The_Story_Continues.21">0.9.5-4</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.5:_The_Story_Continues!">0.9.5-4</a></td>
 <td><a href="exported_manifests/368340/368341/5209542870106580570.txt"><code>5209542870106580570</code></a></td>
 <td><a href="exported_manifests/368340/368342/8580103725986891016.txt"><code>8580103725986891016</code></a></td>
 <td><a href="exported_manifests/368340/368343/7709425442948596295.txt"><code>7709425442948596295</code></a></td>
@@ -854,7 +863,7 @@
 <td>2017/07/03 12:16:04</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.5:_The_Story_Continues.21">0.9.5-3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.5:_The_Story_Continues!">0.9.5-3</a></td>
 <td><a href="exported_manifests/368340/368341/8848580186225653675.txt"><code>8848580186225653675</code></a></td>
 <td><a href="exported_manifests/368340/368342/8515316850479388881.txt"><code>8515316850479388881</code></a></td>
 <td><a href="exported_manifests/368340/368343/3648837102367946535.txt"><code>3648837102367946535</code></a></td>
@@ -863,7 +872,7 @@
 <td>2017/07/02 08:39:00</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.5:_The_Story_Continues.21">0.9.5-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.5:_The_Story_Continues!">0.9.5-2</a></td>
 <td><a href="exported_manifests/368340/368341/8657199369268039824.txt"><code>8657199369268039824</code></a></td>
 <td><a href="exported_manifests/368340/368342/7950909910883750601.txt"><code>7950909910883750601</code></a></td>
 <td><a href="exported_manifests/368340/368343/407753347400765315.txt"><code>407753347400765315</code></a></td>
@@ -872,7 +881,7 @@
 <td>2017/07/01 02:41:29</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.5:_The_Story_Continues.21">0.9.5-1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.5:_The_Story_Continues!">0.9.5-1</a></td>
 <td><a href="exported_manifests/368340/368341/884397939874012977.txt"><code>884397939874012977</code></a></td>
 <td><a href="exported_manifests/368340/368342/4841005686895444018.txt"><code>4841005686895444018</code></a></td>
 <td><a href="exported_manifests/368340/368343/1822365992224719517.txt"><code>1822365992224719517</code></a></td>
@@ -881,7 +890,7 @@
 <td>2017/07/01 00:31:08</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.9.5:_The_Story_Continues.21">0.9.5</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.9.5:_The_Story_Continues!">0.9.5</a></td>
 <td><a href="exported_manifests/368340/368341/7248887640792806225.txt"><code>7248887640792806225</code></a></td>
 <td><a href="exported_manifests/368340/368342/613381444421332446.txt"><code>613381444421332446</code></a></td>
 <td><a href="exported_manifests/368340/368343/9086834643621329277.txt"><code>9086834643621329277</code></a></td>
@@ -953,7 +962,7 @@
 <td>2017/02/27 23:00:37</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.8.5:_Water_Temple_.2B_More_Jungle">0.8.5-4_xmas</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.8.5:_Water_Temple_+_More_Jungle">0.8.5-4_xmas</a></td>
 <td><a href="exported_manifests/368340/368341/2844787580278051347.txt"><code>2844787580278051347</code></a></td>
 <td><a href="exported_manifests/368340/368342/5249022260997872481.txt"><code>5249022260997872481</code></a></td>
 <td><a href="exported_manifests/368340/368343/4651928922400474104.txt"><code>4651928922400474104</code></a></td>
@@ -962,7 +971,7 @@
 <td>2016/12/23 20:20:51</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.8.5:_Water_Temple_.2B_More_Jungle">0.8.5-4</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.8.5:_Water_Temple_+_More_Jungle">0.8.5-4</a></td>
 <td><a href="exported_manifests/368340/368341/1022416352418046671.txt"><code>1022416352418046671</code></a></td>
 <td><a href="exported_manifests/368340/368342/1896557009056867006.txt"><code>1896557009056867006</code></a></td>
 <td><a href="exported_manifests/368340/368343/720581207908886305.txt"><code>720581207908886305</code></a></td>
@@ -971,7 +980,7 @@
 <td>2016/12/16 21:53:11</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.8.5:_Water_Temple_.2B_More_Jungle">0.8.5-3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.8.5:_Water_Temple_+_More_Jungle">0.8.5-3</a></td>
 <td><a href="exported_manifests/368340/368341/6149823605526009576.txt"><code>6149823605526009576</code></a></td>
 <td><a href="exported_manifests/368340/368342/2697366217482321016.txt"><code>2697366217482321016</code></a></td>
 <td><a href="exported_manifests/368340/368343/575933216598194132.txt"><code>575933216598194132</code></a></td>
@@ -980,7 +989,7 @@
 <td>2016/12/14 14:49:56</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.8.5:_Water_Temple_.2B_More_Jungle">0.8.5-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.8.5:_Water_Temple_+_More_Jungle">0.8.5-2</a></td>
 <td><a href="exported_manifests/368340/368341/3129762639573797010.txt"><code>3129762639573797010</code></a></td>
 <td><a href="exported_manifests/368340/368342/4522225871728735494.txt"><code>4522225871728735494</code></a></td>
 <td><a href="exported_manifests/368340/368343/9216644996785981565.txt"><code>9216644996785981565</code></a></td>
@@ -989,7 +998,7 @@
 <td>2016/12/13 22:11:29</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.8.5:_Water_Temple_.2B_More_Jungle">0.8.5</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.8.5:_Water_Temple_+_More_Jungle">0.8.5</a></td>
 <td><a href="exported_manifests/368340/368341/8724465633438525834.txt"><code>8724465633438525834</code></a></td>
 <td><a href="exported_manifests/368340/368342/7057581477475566730.txt"><code>7057581477475566730</code></a></td>
 <td><a href="exported_manifests/368340/368343/7327854783249207945.txt"><code>7327854783249207945</code></a></td>
@@ -998,7 +1007,7 @@
 <td>2016/12/13 18:51:40</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.8.3:_Spooky_Halloween_Update.21">0.8.3-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.8.3:_Spooky_Halloween_Update!">0.8.3-2</a></td>
 <td><a href="exported_manifests/368340/368341/1995541947566920112.txt"><code>1995541947566920112</code></a></td>
 <td><a href="exported_manifests/368340/368342/5351684014757434716.txt"><code>5351684014757434716</code></a></td>
 <td><a href="exported_manifests/368340/368343/5675937205754554811.txt"><code>5675937205754554811</code></a></td>
@@ -1007,7 +1016,7 @@
 <td>2016/10/28 20:35:34</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.8.3:_Spooky_Halloween_Update.21">0.8.3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.8.3:_Spooky_Halloween_Update!">0.8.3</a></td>
 <td><a href="exported_manifests/368340/368341/2434734875484047167.txt"><code>2434734875484047167</code></a></td>
 <td><a href="exported_manifests/368340/368342/8469689685438234810.txt"><code>8469689685438234810</code></a></td>
 <td><a href="exported_manifests/368340/368343/3397527018901305606.txt"><code>3397527018901305606</code></a></td>
@@ -1016,7 +1025,7 @@
 <td>2016/10/28 16:30:51</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.8.2:_More_tweaks..._for_honor.21">0.8.2-3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.8.2:_More_tweaks..._for_honor!">0.8.2-3</a></td>
 <td><a href="exported_manifests/368340/368341/6422806920340617097.txt"><code>6422806920340617097</code></a></td>
 <td><a href="exported_manifests/368340/368342/1172149886042750928.txt"><code>1172149886042750928</code></a></td>
 <td><a href="exported_manifests/368340/368343/8226562012426295361.txt"><code>8226562012426295361</code></a></td>
@@ -1025,7 +1034,7 @@
 <td>2016/10/08 00:37:43</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.8.2:_More_tweaks..._for_honor.21">0.8.2-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.8.2:_More_tweaks..._for_honor!">0.8.2-2</a></td>
 <td><a href="exported_manifests/368340/368341/2875883182735505041.txt"><code>2875883182735505041</code></a></td>
 <td><a href="exported_manifests/368340/368342/5643547848082653522.txt"><code>5643547848082653522</code></a></td>
 <td><a href="exported_manifests/368340/368343/263603277642150977.txt"><code>263603277642150977</code></a></td>
@@ -1034,7 +1043,7 @@
 <td>2016/10/07 23:32:24</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.8.2:_More_tweaks..._for_honor.21">0.8.2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.8.2:_More_tweaks..._for_honor!">0.8.2</a></td>
 <td><a href="exported_manifests/368340/368341/3367844237278186719.txt"><code>3367844237278186719</code></a></td>
 <td><a href="exported_manifests/368340/368342/6572758352070404656.txt"><code>6572758352070404656</code></a></td>
 <td><a href="exported_manifests/368340/368343/598200535238905161.txt"><code>598200535238905161</code></a></td>
@@ -1043,7 +1052,7 @@
 <td>2016/10/07 16:46:32</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.8.1:_Bug_squashing.21">0.8.1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.8.1:_Bug_squashing!">0.8.1</a></td>
 <td><a href="exported_manifests/368340/368341/1015146057597586328.txt"><code>1015146057597586328</code></a></td>
 <td><a href="exported_manifests/368340/368342/3012595993764387444.txt"><code>3012595993764387444</code></a></td>
 <td><a href="exported_manifests/368340/368343/3691110109437791119.txt"><code>3691110109437791119</code></a></td>
@@ -1052,7 +1061,7 @@
 <td>2016/10/03 12:15:31</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.8.0:_Ruins.2C_Jungle.2C_City.2C_Moar.21">0.8.0-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.8.0:_Ruins,_Jungle,_City,_Moar!">0.8.0-2</a></td>
 <td><a href="exported_manifests/368340/368341/3596128607094621454.txt"><code>3596128607094621454</code></a></td>
 <td><a href="exported_manifests/368340/368342/463273429951207218.txt"><code>463273429951207218</code></a></td>
 <td><a href="exported_manifests/368340/368343/5149562673417779362.txt"><code>5149562673417779362</code></a></td>
@@ -1061,7 +1070,7 @@
 <td>2016/10/02 10:08:04</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.8.0:_Ruins.2C_Jungle.2C_City.2C_Moar.21">0.8.0</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.8.0:_Ruins,_Jungle,_City,_Moar!">0.8.0</a></td>
 <td><a href="exported_manifests/368340/368341/7067088772241368408.txt"><code>7067088772241368408</code></a></td>
 <td><a href="exported_manifests/368340/368342/3504377048694265376.txt"><code>3504377048694265376</code></a></td>
 <td><a href="exported_manifests/368340/368343/5750978620827746763.txt"><code>5750978620827746763</code></a></td>
@@ -1070,7 +1079,7 @@
 <td>2016/10/02 01:20:32</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.7.1:_All_the_Fixes.21_Maybe.">0.7.1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.7.1:_All_the_Fixes!_Maybe.">0.7.1</a></td>
 <td><a href="exported_manifests/368340/368341/5689555967917626694.txt"><code>5689555967917626694</code></a></td>
 <td><a href="exported_manifests/368340/368342/4409975038133382851.txt"><code>4409975038133382851</code></a></td>
 <td><a href="exported_manifests/368340/368343/2791267974092268831.txt"><code>2791267974092268831</code></a></td>
@@ -1079,7 +1088,7 @@
 <td>2016/06/22 22:25:31</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.7.0:_STORY_TIME.21_.2B_New_Faces">0.7.0</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.7.0:_STORY_TIME!_+_New_Faces">0.7.0</a></td>
 <td><a href="exported_manifests/368340/368341/7109539038452297251.txt"><code>7109539038452297251</code></a></td>
 <td><a href="exported_manifests/368340/368342/2066402766095636702.txt"><code>2066402766095636702</code></a></td>
 <td><a href="exported_manifests/368340/368343/8259880702454035222.txt"><code>8259880702454035222</code></a></td>
@@ -1088,7 +1097,7 @@
 <td>2016/06/20 14:54:32</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.6.1:_The_usual_Fixes.21">0.6.1-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.6.1:_The_usual_Fixes!">0.6.1-2</a></td>
 <td><a href="exported_manifests/368340/368341/702043652076579876.txt"><code>702043652076579876</code></a></td>
 <td><a href="exported_manifests/368340/368342/4019968244917059090.txt"><code>4019968244917059090</code></a></td>
 <td><a href="exported_manifests/368340/368343/4020611161407926951.txt"><code>4020611161407926951</code></a></td>
@@ -1097,7 +1106,7 @@
 <td>2016/05/11 10:26:08</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.6.1:_The_usual_Fixes.21">0.6.1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.6.1:_The_usual_Fixes!">0.6.1</a></td>
 <td><a href="exported_manifests/368340/368341/3146206840636246532.txt"><code>3146206840636246532</code></a></td>
 <td><a href="exported_manifests/368340/368342/4372499061987736839.txt"><code>4372499061987736839</code></a></td>
 <td><a href="exported_manifests/368340/368343/8208673589801571150.txt"><code>8208673589801571150</code></a></td>
@@ -1106,7 +1115,7 @@
 <td>2016/05/09 19:26:29</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.6.0:_New_Area.2C_Dungeon.2C_Moar">0.6.0-3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.6.0:_New_Area,_Dungeon,_Moar">0.6.0-3</a></td>
 <td><a href="exported_manifests/368340/368341/1589835587123254783.txt"><code>1589835587123254783</code></a></td>
 <td><a href="exported_manifests/368340/368342/2888569346337418662.txt"><code>2888569346337418662</code></a></td>
 <td><a href="exported_manifests/368340/368343/271586570154019684.txt"><code>271586570154019684</code></a></td>
@@ -1115,7 +1124,7 @@
 <td>2016/05/08 10:48:02</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.6.0:_New_Area.2C_Dungeon.2C_Moar">0.6.0-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.6.0:_New_Area,_Dungeon,_Moar">0.6.0-2</a></td>
 <td><a href="exported_manifests/368340/368341/638123956001749618.txt"><code>638123956001749618</code></a></td>
 <td><a href="exported_manifests/368340/368342/8225106306749632401.txt"><code>8225106306749632401</code></a></td>
 <td><a href="exported_manifests/368340/368343/5689134005804406889.txt"><code>5689134005804406889</code></a></td>
@@ -1124,7 +1133,7 @@
 <td>2016/05/08 01:50:32</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.6.0:_New_Area.2C_Dungeon.2C_Moar">0.6.0</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.6.0:_New_Area,_Dungeon,_Moar">0.6.0</a></td>
 <td><a href="exported_manifests/368340/368341/669496286083856275.txt"><code>669496286083856275</code></a></td>
 <td><a href="exported_manifests/368340/368342/3032589701989153616.txt"><code>3032589701989153616</code></a></td>
 <td><a href="exported_manifests/368340/368343/1718555852049853478.txt"><code>1718555852049853478</code></a></td>
@@ -1142,7 +1151,7 @@
 <td>2016/04/01 09:09:59</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.5.1:_Fixes.2C_Fixes.2C_Fixes.21">0.5.1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.5.1:_Fixes,_Fixes,_Fixes!">0.5.1</a></td>
 <td><a href="exported_manifests/368340/368341/5109070813103075256.txt"><code>5109070813103075256</code></a></td>
 <td><a href="exported_manifests/368340/368342/801525663996996240.txt"><code>801525663996996240</code></a></td>
 <td><a href="exported_manifests/368340/368343/5201805640248548636.txt"><code>5201805640248548636</code></a></td>
@@ -1151,7 +1160,7 @@
 <td>2016/02/12 21:50:19</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.5.0:_Story.2C_Menus_and_Party">0.5.0</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.5.0:_Story,_Menus_and_Party">0.5.0</a></td>
 <td><a href="exported_manifests/368340/368341/5453195775688643907.txt"><code>5453195775688643907</code></a></td>
 <td><a href="exported_manifests/368340/368342/1210693658666713667.txt"><code>1210693658666713667</code></a></td>
 <td><a href="exported_manifests/368340/368343/6046767883902858157.txt"><code>6046767883902858157</code></a></td>
@@ -1160,7 +1169,7 @@
 <td>2016/02/09 21:58:53</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.4.1:_Happy_Holiday_Release.21">0.4.1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.4.1:_Happy_Holiday_Release!">0.4.1</a></td>
 <td><a href="exported_manifests/368340/368341/6443026587273821441.txt"><code>6443026587273821441</code></a></td>
 <td></td>
 <td></td>
@@ -1169,7 +1178,7 @@
 <td>2015/12/24 15:15:09</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.4.0:_Bergen.2C_Dungeon_.26_Guard">0.4.0</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.4.0:_Bergen,_Dungeon_&amp;_Guard">0.4.0</a></td>
 <td><a href="exported_manifests/368340/368341/4587142309008686873.txt"><code>4587142309008686873</code></a></td>
 <td></td>
 <td></td>
@@ -1178,7 +1187,7 @@
 <td>2015/12/01 23:48:34</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.3.5:_Time_to_Teleport.21">0.3.5-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.3.5:_Time_to_Teleport!">0.3.5-2</a></td>
 <td><a href="exported_manifests/368340/368341/8159863442404101747.txt"><code>8159863442404101747</code></a></td>
 <td></td>
 <td></td>
@@ -1187,7 +1196,7 @@
 <td>2015/11/09 17:21:14</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.3.5:_Time_to_Teleport.21">0.3.5</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.3.5:_Time_to_Teleport!">0.3.5</a></td>
 <td><a href="exported_manifests/368340/368341/7058989362692624043.txt"><code>7058989362692624043</code></a></td>
 <td></td>
 <td></td>
@@ -1232,7 +1241,7 @@
 <td>2015/10/02 22:15:15</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.3.0:_Merging_Modes_and_Quests.21">0.3.0</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.3.0:_Merging_Modes_and_Quests!">0.3.0</a></td>
 <td><a href="exported_manifests/368340/368341/5989626767822805782.txt"><code>5989626767822805782</code></a></td>
 <td></td>
 <td></td>
@@ -1241,7 +1250,7 @@
 <td>2015/09/30 19:58:07</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.2.2:_Last_Fixes.2C_we_swear.21">0.2.2-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.2.2:_Last_Fixes,_we_swear!">0.2.2-2</a></td>
 <td><a href="exported_manifests/368340/368341/699617942065737767.txt"><code>699617942065737767</code></a></td>
 <td></td>
 <td></td>
@@ -1250,7 +1259,7 @@
 <td>2015/07/11 08:11:29</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.2.2:_Last_Fixes.2C_we_swear.21">0.2.2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.2.2:_Last_Fixes,_we_swear!">0.2.2</a></td>
 <td><a href="exported_manifests/368340/368341/3967772539486775005.txt"><code>3967772539486775005</code></a></td>
 <td></td>
 <td></td>
@@ -1259,7 +1268,7 @@
 <td>2015/07/10 22:13:56</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.2.1:_Ye_.27ol_Bugfixes">0.2.1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.2.1:_Ye_&#x27;ol_Bugfixes">0.2.1</a></td>
 <td><a href="exported_manifests/368340/368341/8118851911046557.txt"><code>8118851911046557</code></a></td>
 <td></td>
 <td></td>
@@ -1286,7 +1295,7 @@
 <td>2015/05/18 15:47:33</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#0.1.6:_Early_Access_started.21">0.1.6</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#0.1.6:_Early_Access_started!">0.1.6</a></td>
 <td><a href="exported_manifests/368340/368341/5156412104742270510.txt"><code>5156412104742270510</code></a></td>
 <td></td>
 <td></td>
@@ -1438,7 +1447,7 @@
 <td>2021/02/26 17:43:43</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest.21">1.3.0-4</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest!">1.3.0-4</a></td>
 <td><a href="exported_manifests/368340/368341/8847116477226179803.txt"><code>8847116477226179803</code></a></td>
 <td><a href="exported_manifests/368340/368342/7285175629870523365.txt"><code>7285175629870523365</code></a></td>
 <td><a href="exported_manifests/368340/368343/767069775311821081.txt"><code>767069775311821081</code></a></td>
@@ -1447,7 +1456,7 @@
 <td>2020/07/30 12:15:57</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest.21">1.3.0-3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest!">1.3.0-3</a></td>
 <td><a href="exported_manifests/368340/368341/1197255176405433489.txt"><code>1197255176405433489</code></a></td>
 <td><a href="exported_manifests/368340/368342/6087304259283681200.txt"><code>6087304259283681200</code></a></td>
 <td><a href="exported_manifests/368340/368343/8750245533377285284.txt"><code>8750245533377285284</code></a></td>
@@ -1456,7 +1465,7 @@
 <td>2020/07/15 19:14:16</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest.21">1.3.0-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest!">1.3.0-2</a></td>
 <td><a href="exported_manifests/368340/368341/5629111407937153027.txt"><code>5629111407937153027</code></a></td>
 <td><a href="exported_manifests/368340/368342/5556411973003173809.txt"><code>5556411973003173809</code></a></td>
 <td><a href="exported_manifests/368340/368343/3284044497455540827.txt"><code>3284044497455540827</code></a></td>
@@ -1465,7 +1474,7 @@
 <td>2020/07/12 13:02:17</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest.21">1.3.0-1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest!">1.3.0-1</a></td>
 <td><a href="exported_manifests/368340/368341/2007190931433869969.txt"><code>2007190931433869969</code></a></td>
 <td><a href="exported_manifests/368340/368342/7134559769781636815.txt"><code>7134559769781636815</code></a></td>
 <td><a href="exported_manifests/368340/368343/8013952293197105765.txt"><code>8013952293197105765</code></a></td>
@@ -1474,7 +1483,7 @@
 <td>2020/07/10 21:04:21</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest.21">1.3.0</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.3.0:_Platform_Exclusive_Quest!">1.3.0</a></td>
 <td><a href="exported_manifests/368340/368341/3267020206774091776.txt"><code>3267020206774091776</code></a></td>
 <td><a href="exported_manifests/368340/368342/5313678004113993040.txt"><code>5313678004113993040</code></a></td>
 <td><a href="exported_manifests/368340/368343/6788516100964458843.txt"><code>6788516100964458843</code></a></td>
@@ -1483,7 +1492,7 @@
 <td>2020/07/10 15:08:37</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game.2B_is_out.21">1.2.0-5</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game+_is_out!">1.2.0-5</a></td>
 <td><a href="exported_manifests/368340/368341/6154553281637299436.txt"><code>6154553281637299436</code></a></td>
 <td><a href="exported_manifests/368340/368342/3169061190980252888.txt"><code>3169061190980252888</code></a></td>
 <td><a href="exported_manifests/368340/368343/6380808559592938286.txt"><code>6380808559592938286</code></a></td>
@@ -1492,7 +1501,7 @@
 <td>2019/12/18 11:40:02</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game.2B_is_out.21">1.2.0-4</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game+_is_out!">1.2.0-4</a></td>
 <td><a href="exported_manifests/368340/368341/1081521736469183484.txt"><code>1081521736469183484</code></a></td>
 <td><a href="exported_manifests/368340/368342/5499148235707714803.txt"><code>5499148235707714803</code></a></td>
 <td><a href="exported_manifests/368340/368343/1016323920717035046.txt"><code>1016323920717035046</code></a></td>
@@ -1501,7 +1510,7 @@
 <td>2019/09/20 19:57:08</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game.2B_is_out.21">1.2.0-3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game+_is_out!">1.2.0-3</a></td>
 <td><a href="exported_manifests/368340/368341/3438626714823366884.txt"><code>3438626714823366884</code></a></td>
 <td><a href="exported_manifests/368340/368342/1858708830287232450.txt"><code>1858708830287232450</code></a></td>
 <td><a href="exported_manifests/368340/368343/2441392551032234271.txt"><code>2441392551032234271</code></a></td>
@@ -1510,7 +1519,7 @@
 <td>2019/09/16 23:19:14</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game.2B_is_out.21">1.2.0-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game+_is_out!">1.2.0-2</a></td>
 <td><a href="exported_manifests/368340/368341/7256005545527251789.txt"><code>7256005545527251789</code></a></td>
 <td><a href="exported_manifests/368340/368342/846880857799681320.txt"><code>846880857799681320</code></a></td>
 <td><a href="exported_manifests/368340/368343/8897426003573191915.txt"><code>8897426003573191915</code></a></td>
@@ -1519,7 +1528,7 @@
 <td>2019/09/13 22:47:02</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game.2B_is_out.21">1.2.0-1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game+_is_out!">1.2.0-1</a></td>
 <td><a href="exported_manifests/368340/368341/896139432602297305.txt"><code>896139432602297305</code></a></td>
 <td><a href="exported_manifests/368340/368342/5463714889604774319.txt"><code>5463714889604774319</code></a></td>
 <td><a href="exported_manifests/368340/368343/526874772755668996.txt"><code>526874772755668996</code></a></td>
@@ -1528,7 +1537,7 @@
 <td>2019/09/13 20:30:42</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game.2B_is_out.21">1.2.0</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.2.0:_New_Game+_is_out!">1.2.0</a></td>
 <td><a href="exported_manifests/368340/368341/8149460979009022608.txt"><code>8149460979009022608</code></a></td>
 <td><a href="exported_manifests/368340/368342/3992587410449415700.txt"><code>3992587410449415700</code></a></td>
 <td><a href="exported_manifests/368340/368343/3679825394909261564.txt"><code>3679825394909261564</code></a></td>
@@ -1537,7 +1546,7 @@
 <td>2019/09/13 14:58:08</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_.26_Pets_.26_Quests">1.1.0-3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_&amp;_Pets_&amp;_Quests">1.1.0-3</a></td>
 <td><a href="exported_manifests/368340/368341/8881177211891065511.txt"><code>8881177211891065511</code></a></td>
 <td><a href="exported_manifests/368340/368342/8133045958294998844.txt"><code>8133045958294998844</code></a></td>
 <td><a href="exported_manifests/368340/368343/5179647602539804177.txt"><code>5179647602539804177</code></a></td>
@@ -1546,7 +1555,7 @@
 <td>2019/05/16 18:02:39</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_.26_Pets_.26_Quests">1.1.0-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_&amp;_Pets_&amp;_Quests">1.1.0-2</a></td>
 <td><a href="exported_manifests/368340/368341/3589857626389460767.txt"><code>3589857626389460767</code></a></td>
 <td><a href="exported_manifests/368340/368342/3555908449702715639.txt"><code>3555908449702715639</code></a></td>
 <td><a href="exported_manifests/368340/368343/5705411249758155935.txt"><code>5705411249758155935</code></a></td>
@@ -1555,7 +1564,7 @@
 <td>2019/05/16 13:33:29</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_.26_Pets_.26_Quests">1.1.0-1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_&amp;_Pets_&amp;_Quests">1.1.0-1</a></td>
 <td><a href="exported_manifests/368340/368341/2803263103605833707.txt"><code>2803263103605833707</code></a></td>
 <td><a href="exported_manifests/368340/368342/7335812465469418595.txt"><code>7335812465469418595</code></a></td>
 <td><a href="exported_manifests/368340/368343/4454404489555876590.txt"><code>4454404489555876590</code></a></td>
@@ -1564,7 +1573,7 @@
 <td>2019/05/15 22:29:09</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_.26_Pets_.26_Quests">1.1.0</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.1.0:_Arena_&amp;_Pets_&amp;_Quests">1.1.0</a></td>
 <td><a href="exported_manifests/368340/368341/5911429650722802045.txt"><code>5911429650722802045</code></a></td>
 <td><a href="exported_manifests/368340/368342/1018347351967476589.txt"><code>1018347351967476589</code></a></td>
 <td><a href="exported_manifests/368340/368343/5193354031137665680.txt"><code>5193354031137665680</code></a></td>
@@ -1573,7 +1582,7 @@
 <td>2019/05/15 14:41:40</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_.26_NPC_Dialogs">1.0.3-4</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_&amp;_NPC_Dialogs">1.0.3-4</a></td>
 <td><a href="exported_manifests/368340/368341/5643211583457464421.txt"><code>5643211583457464421</code></a></td>
 <td><a href="exported_manifests/368340/368342/6948123522210198551.txt"><code>6948123522210198551</code></a></td>
 <td><a href="exported_manifests/368340/368343/7174369504208586169.txt"><code>7174369504208586169</code></a></td>
@@ -1582,7 +1591,7 @@
 <td>2019/04/10 09:45:50</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_.26_NPC_Dialogs">1.0.3-3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_&amp;_NPC_Dialogs">1.0.3-3</a></td>
 <td><a href="exported_manifests/368340/368341/2480963888358735827.txt"><code>2480963888358735827</code></a></td>
 <td><a href="exported_manifests/368340/368342/4231435004597048368.txt"><code>4231435004597048368</code></a></td>
 <td><a href="exported_manifests/368340/368343/5549023321396614107.txt"><code>5549023321396614107</code></a></td>
@@ -1591,7 +1600,7 @@
 <td>2019/04/01 06:38:41</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_.26_NPC_Dialogs">1.0.3-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_&amp;_NPC_Dialogs">1.0.3-2</a></td>
 <td><a href="exported_manifests/368340/368341/2841827830076552140.txt"><code>2841827830076552140</code></a></td>
 <td><a href="exported_manifests/368340/368342/7489068881647574940.txt"><code>7489068881647574940</code></a></td>
 <td><a href="exported_manifests/368340/368343/8009268074869971697.txt"><code>8009268074869971697</code></a></td>
@@ -1600,7 +1609,7 @@
 <td>2019/02/01 13:20:01</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_.26_NPC_Dialogs">1.0.3-1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_&amp;_NPC_Dialogs">1.0.3-1</a></td>
 <td><a href="exported_manifests/368340/368341/1824892734581592850.txt"><code>1824892734581592850</code></a></td>
 <td><a href="exported_manifests/368340/368342/5418337880807276114.txt"><code>5418337880807276114</code></a></td>
 <td><a href="exported_manifests/368340/368343/7376113260500265099.txt"><code>7376113260500265099</code></a></td>
@@ -1609,7 +1618,7 @@
 <td>2019/01/31 21:51:35</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_.26_NPC_Dialogs">1.0.3</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.3:_Quests_&amp;_NPC_Dialogs">1.0.3</a></td>
 <td><a href="exported_manifests/368340/368341/5974881139571576778.txt"><code>5974881139571576778</code></a></td>
 <td><a href="exported_manifests/368340/368342/3552942854472818016.txt"><code>3552942854472818016</code></a></td>
 <td><a href="exported_manifests/368340/368343/1870475041025892013.txt"><code>1870475041025892013</code></a></td>
@@ -1618,7 +1627,7 @@
 <td>2019/01/31 15:50:56</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2-2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2-2</a></td>
 <td><a href="exported_manifests/368340/368341/3512910654571063793.txt"><code>3512910654571063793</code></a></td>
 <td><a href="exported_manifests/368340/368342/1338302774880487692.txt"><code>1338302774880487692</code></a></td>
 <td><a href="exported_manifests/368340/368343/5530507949695818322.txt"><code>5530507949695818322</code></a></td>
@@ -1627,7 +1636,7 @@
 <td>2018/11/28 14:00:08</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2-1</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2-1</a></td>
 <td><a href="exported_manifests/368340/368341/1567890996554724605.txt"><code>1567890996554724605</code></a></td>
 <td><a href="exported_manifests/368340/368342/6080475473458197832.txt"><code>6080475473458197832</code></a></td>
 <td><a href="exported_manifests/368340/368343/436957113776929539.txt"><code>436957113776929539</code></a></td>
@@ -1636,7 +1645,7 @@
 <td>2018/11/27 22:34:14</td>
 </tr>
 <tr>
-<td><a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_.26_NPCs">1.0.2</a></td>
+<td><a href="https://crosscode.fandom.com/Version_history#1.0.2:_Achievements_&amp;_NPCs">1.0.2</a></td>
 <td><a href="exported_manifests/368340/368341/1182685610764480269.txt"><code>1182685610764480269</code></a></td>
 <td><a href="exported_manifests/368340/368342/353691732214109561.txt"><code>353691732214109561</code></a></td>
 <td><a href="exported_manifests/368340/368343/8596038085403178789.txt"><code>8596038085403178789</code></a></td>

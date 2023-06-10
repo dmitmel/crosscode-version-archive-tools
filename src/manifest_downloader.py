@@ -65,7 +65,7 @@ def main() -> None:
   subparser = subparsers.add_parser("export", help="")
   subparser.set_defaults(func=cmd_export_manifests)
   subparser.add_argument(
-    "--output", "-o", default=os.path.join(PROJECT_DIR, 'data', 'exported_manifests')
+    "--output", "-o", default=os.path.join(PROJECT_DIR, "data", "exported_manifests")
   )
 
   args = parser.parse_args()
@@ -116,9 +116,13 @@ def cmd_update_database(args: argparse.Namespace) -> None:
         ).fetchone() is not None:
           continue
 
+        # <https://steamdb.info/blog/manifest-request-codes/>
+        manifest_code: int = cdn_client.get_manifest_request_code(app_id, depot_id, manifest_id)
         # See also:
         # <https://github.com/SteamDatabase/Protobufs/blob/a4d8b95a6ac5c1a45036cffa4349d28993edd7ba/steam/content_manifest.proto>
-        manifest: CDNDepotManifest = cdn_client.get_manifest(app_id, depot_id, manifest_id)
+        manifest: CDNDepotManifest = cdn_client.get_manifest(
+          app_id, depot_id, manifest_id, manifest_request_code=manifest_code
+        )
 
         db_cursor.execute(
           """

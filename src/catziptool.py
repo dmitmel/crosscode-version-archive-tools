@@ -14,15 +14,15 @@ import zipfile
 class DebugZipFile(zipfile.ZipFile):
 
   @property
-  def debug(self):
+  def debug(self) -> int:
     return 3
 
   @debug.setter
-  def debug(self, value):
+  def debug(self, value: int) -> None:
     pass
 
 
-def very_hacky_and_idiotic_split(path):
+def very_hacky_and_idiotic_split(path: str) -> int | None:
   stdout = io.StringIO()
   with contextlib.redirect_stdout(stdout):
     try:
@@ -34,7 +34,7 @@ def very_hacky_and_idiotic_split(path):
   return int(match.group(1)) if match else None
 
 
-def sane_split(path):
+def sane_split(path: str) -> int | None:
   with open(path, "rb") as fp:
     # Copied from <https://github.com/python/cpython/blob/v3.9.7/Lib/zipfile.py#L1316-L1339>
     try:
@@ -51,7 +51,7 @@ def sane_split(path):
     return concat
 
 
-def main():
+def main() -> None:
   parser = argparse.ArgumentParser(
     description="A script for separating Zip files appended to executables."
   )
@@ -94,7 +94,7 @@ def main():
         print(f"{hasher.hexdigest()}  {input_path}")
 
     elif args.truncate == "exe":
-      with open(input_path, 'rb+') as file:
+      with open(input_path, "rb+") as file:
         file.truncate(zip_offset)
 
     else:
