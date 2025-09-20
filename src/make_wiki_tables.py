@@ -9,8 +9,8 @@ import html
 import os
 import re
 import sqlite3
-from datetime import datetime, timezone
-from typing import IO, Optional
+from datetime import UTC, datetime
+from typing import IO
 
 import mwclient
 
@@ -64,7 +64,6 @@ def main() -> None:
 
   db_connection: sqlite3.Connection = manifest_downloader.connect_to_database()
   with db_connection, contextlib.closing(db_connection.cursor()) as db_cursor:
-
     with open("data/steam_manifests.md", "w") as output_doc:
 
       def esc(x: object) -> str:
@@ -74,7 +73,9 @@ def main() -> None:
         return f"<code>{esc(branch_name)}</code>"
 
       def render_depot_id(depot_id: int) -> str:
-        return f'<a href="https://steamdb.info/depot/{esc(depot_id)}/"><code>{esc(depot_id)}</code></a>'
+        return (
+          f'<a href="https://steamdb.info/depot/{esc(depot_id)}/"><code>{esc(depot_id)}</code></a>'
+        )
 
       def render_manifest_id(depot_id: int, manifest_id: int) -> str:
         url = f"exported_manifests/{esc(app_id)}/{esc(depot_id)}/{esc(manifest_id)}.txt"
@@ -83,7 +84,7 @@ def main() -> None:
 
       def render_version(version: str) -> str:
         anchor = version_headers_mapping.get(
-          version[:version.find("-")] if "-" in version else version
+          version[: version.find("-")] if "-" in version else version
         )
         if anchor is not None:
           url = wiki_url(f"{VERSION_HISTORY_WIKI_PAGE_ID}#{anchor}")
@@ -126,7 +127,7 @@ def main() -> None:
           for depot_name, manifest_id in version_branches.get(branch_name, {}).items():
             branch_latest_manifests.setdefault(
               depot_name,
-              (version_num, manifest_id if isinstance(manifest_id, list) else [manifest_id])
+              (version_num, manifest_id if isinstance(manifest_id, list) else [manifest_id]),
             )
 
         last_row = table.row_count()
@@ -134,10 +135,7 @@ def main() -> None:
           last_row, 0, render_branch_name(branch_name), rowspan=len(branch_latest_manifests)
         )
         table.put(
-          last_row,
-          1,
-          esc(BRANCHES_INFO.get(branch_name, "")),
-          rowspan=len(branch_latest_manifests)
+          last_row, 1, esc(BRANCHES_INFO.get(branch_name, "")), rowspan=len(branch_latest_manifests)
         )
 
         for i, (depot, (version, manifest_ids)) in enumerate(branch_latest_manifests.items()):
@@ -146,10 +144,12 @@ def main() -> None:
             last_row + i, 2, f"{render_depot_id(depot_id)} {esc(DEPOTS_INFO.get(depot_id, ''))}"
           )
           table.put(
-            last_row + i, 3, "<br>".join(
+            last_row + i,
+            3,
+            "<br>".join(
               f"{render_manifest_id(depot_id, int(manifest_id))} {render_version(version)}"
               for manifest_id in manifest_ids
-            )
+            ),
           )
 
       table.render_to_html(output_doc)
@@ -182,8 +182,9 @@ def main() -> None:
           if depot_manifests is None:
             continue
           depot_manifests = {
-            depot_name:
-            list(map(int, manifest_id if isinstance(manifest_id, list) else [manifest_id]))
+            depot_name: list(
+              map(int, manifest_id if isinstance(manifest_id, list) else [manifest_id])
+            )
             for depot_name, manifest_id in depot_manifests.items()
           }
 
@@ -195,21 +196,24 @@ def main() -> None:
             depot_id = int(crosscode_app["depots"][DepotName(depot_name)])
             manifest_ids = depot_manifests.get(DepotName(depot_name), [])
             table.put(
-              last_row, 1 + i, "<br>".join(
+              last_row,
+              1 + i,
+              "<br>".join(
                 render_manifest_id(depot_id, manifest_id) for manifest_id in manifest_ids
-              )
+              ),
             )
 
             for manifest_id in manifest_ids:
-              uploaded_at, = db_cursor.execute(
+              (uploaded_at,) = db_cursor.execute(
                 """ SELECT seen_by_steamdb_at FROM manifests WHERE depot_id = ? AND id = ? """,
-                (depot_id, manifest_id)
+                (depot_id, manifest_id),
               ).fetchone()
               upload_dates.append(datetime.fromisoformat(uploaded_at))
 
           table.put(
-            last_row, 1 + len(depot_names),
-            esc(min(upload_dates).astimezone(timezone.utc).strftime("%Y/%m/%d %H:%M:%S"))
+            last_row,
+            1 + len(depot_names),
+            esc(min(upload_dates).astimezone(UTC).strftime("%Y/%m/%d %H:%M:%S")),
           )
 
         table.render_to_html(output_doc)
@@ -219,7 +223,6 @@ def main() -> None:
 
 
 class TableBuilder:
-
   __slots__ = ("cells",)
 
   def __init__(self) -> None:
@@ -237,7 +240,7 @@ class TableBuilder:
     cell = TableCell(is_heading, cell)
     for _ in range(row - len(self.cells) + rowspan):
       self.cells.append([])
-    for row_cells in self.cells[row:row + rowspan]:
+    for row_cells in self.cells[row : row + rowspan]:
       # Dammit, this is the one time I miss Lua tables
       for _ in range(col - len(row_cells)):
         row_cells.append(TableCell(False, None))
@@ -253,7 +256,7 @@ class TableBuilder:
   def row_count(self) -> int:
     return len(self.cells)
 
-  def col_count(self, row: Optional[int] = None) -> int:
+  def col_count(self, row: int | None = None) -> int:
     if row is None:
       return max(map(len, self.cells))
     else:
@@ -276,13 +279,13 @@ class TableBuilder:
         cell.already_rendered = True
         rowspan, colspan = 1, 1
 
-        for hscan_cell in row_cells[col_idx + 1:]:
+        for hscan_cell in row_cells[col_idx + 1 :]:
           if hscan_cell is cell:
             colspan += 1
           else:
             break
-        for vscan_row_cells in self.cells[row_idx + 1:]:
-          vscan_row_slice = vscan_row_cells[col_idx:col_idx + colspan]
+        for vscan_row_cells in self.cells[row_idx + 1 :]:
+          vscan_row_slice = vscan_row_cells[col_idx : col_idx + colspan]
           if len(vscan_row_slice) != colspan:
             break
           if all(vscan_cell is cell for vscan_cell in vscan_row_slice):
@@ -305,7 +308,6 @@ class TableBuilder:
 
 
 class TableCell:
-
   __slots__ = ("is_heading", "contents", "already_rendered")
 
   def __init__(self, is_heading: bool, contents: object) -> None:

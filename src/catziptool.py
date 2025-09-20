@@ -12,7 +12,6 @@ import zipfile
 
 
 class DebugZipFile(zipfile.ZipFile):
-
   @property
   def debug(self) -> int:
     return 3
@@ -79,11 +78,11 @@ def main() -> None:
     if args.get_offset:
       with open(input_path, "rb") as file:
         fsize = file.seek(0, io.SEEK_END)
-      print(f"{zip_offset}-{fsize}  {fsize-zip_offset}  {input_path}")
+      print(f"{zip_offset}-{fsize}  {fsize - zip_offset}  {input_path}")
 
     elif args.print_hash:
       with open(input_path, "rb") as file:
-        hasher = hashlib.sha1()
+        hasher = hashlib.sha1()  # noqa: S324
         bytes_left = zip_offset
         while bytes_left > 0:
           chunk = file.read(min(io.DEFAULT_BUFFER_SIZE, bytes_left))

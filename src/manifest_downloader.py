@@ -10,10 +10,10 @@ import logging
 import os
 import sqlite3
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from getpass import getpass
 from types import TracebackType
-from typing import IO, Optional, Type, TypedDict, Union, cast
+from typing import IO, TypedDict, cast
 
 import yaml
 from steam.client import SteamClient
@@ -87,7 +87,10 @@ def cmd_update_database(args: argparse.Namespace) -> None:
         if not input_manifest.get("enabled", True):
           continue
         each_and_every_manifest.append((
-          int(input_app["id"]), int(input_depot["id"]), int(input_manifest["id"]), input_manifest
+          int(input_app["id"]),
+          int(input_depot["id"]),
+          int(input_manifest["id"]),
+          input_manifest,
         ))
 
   auth_secrets_dir = os.path.join(PROJECT_DIR, "data", "steam_auth")
@@ -109,11 +112,15 @@ def cmd_update_database(args: argparse.Namespace) -> None:
       )
 
       with db_connection, contextlib.closing(db_connection.cursor()) as db_cursor:
-        if db_cursor.execute(
-          """
-          SELECT 1 FROM manifests WHERE app_id = ? AND depot_id = ? AND id = ? LIMIT 1
-          """, (app_id, depot_id, manifest_id)
-        ).fetchone() is not None:
+        if (
+          db_cursor.execute(
+            """
+            SELECT 1 FROM manifests WHERE app_id = ? AND depot_id = ? AND id = ? LIMIT 1
+            """,
+            (app_id, depot_id, manifest_id),
+          ).fetchone()
+          is not None
+        ):
           continue
 
         # <https://steamdb.info/blog/manifest-request-codes/>
@@ -128,15 +135,16 @@ def cmd_update_database(args: argparse.Namespace) -> None:
           """
           INSERT INTO manifests(app_id, depot_id, id, created_at, seen_by_steamdb_at, original_size, compressed_size)
           VALUES (?, ?, ?, ?, ?, ?, ?)
-          """, (
+          """,
+          (
             app_id,
             depot_id,
             manifest_id,
-            datetime.fromtimestamp(manifest.creation_time, timezone.utc),
-            datetime.fromtimestamp(manifest_obj["seen"], timezone.utc),
+            datetime.fromtimestamp(manifest.creation_time, UTC),
+            datetime.fromtimestamp(manifest_obj["seen"], UTC),
             manifest.size_original,
             manifest.size_compressed,
-          )
+          ),
         )
 
         def normalize_file_path(path_raw: str) -> str:
@@ -163,7 +171,8 @@ def cmd_update_database(args: argparse.Namespace) -> None:
               path, original_size, compressed_size, chunks_count, flags, hash_sha1, link_target
             )
             VALUES (?, ?, ?, ?, ?, ?, ?)
-            """, row
+            """,
+            row,
           )
           db_cursor.execute(
             """
@@ -174,12 +183,14 @@ def cmd_update_database(args: argparse.Namespace) -> None:
                 AND flags = ? AND hash_sha1 = ? AND link_target = ?
               LIMIT 1
             ))
-            """, (depot_id, manifest_id, *row)
+            """,
+            (depot_id, manifest_id, *row),
           )
 
 
 def cmd_open_steamdb_pages(args: argparse.Namespace) -> None:
   import webbrowser
+
   input_manifests_data = load_input_manifests()
   for app in input_manifests_data["apps"]:
     for depot in app["depots"]:
@@ -220,7 +231,7 @@ def cmd_export_manifests(args: argparse.Namespace) -> None:
 
 
 def export_single_manifest(
-  db_connection: sqlite3.Connection, depot_id: int, manifest_id: Optional[int], output: IO[str]
+  db_connection: sqlite3.Connection, depot_id: int, manifest_id: int | None, output: IO[str]
 ) -> None:
   """
   The exported text format is basically a rip-off from
@@ -235,22 +246,24 @@ def export_single_manifest(
 
   with db_connection, contextlib.closing(db_connection.cursor()) as db_cursor:
     if manifest_id is None:
-      result: sqlite3.Row = db_cursor.execute(
+      result = db_cursor.execute(
         """
         SELECT id FROM manifests
         WHERE depot_id = ?
         ORDER BY created_at DESC
         LIMIT 1
-        """, (depot_id,)
+        """,
+        (depot_id,),
       ).fetchone()
       if result is not None:
-        manifest_id, = result
+        (manifest_id,) = result
 
-    result: sqlite3.Row = db_cursor.execute(
+    result = db_cursor.execute(
       """
       SELECT created_at, seen_by_steamdb_at, original_size, compressed_size FROM manifests
       WHERE depot_id = ? AND id = ? LIMIT 1
-      """, (depot_id, manifest_id)
+      """,
+      (depot_id, manifest_id),
     ).fetchone()
     if result is None:
       raise LookupError("Manifest not found!")
@@ -262,16 +275,17 @@ def export_single_manifest(
       INNER JOIN manifest_files AS m ON a.id = m.file_id
       WHERE m.depot_id = ? AND m.manifest_id = ?
       ORDER BY a.path ASC
-      """, (depot_id, manifest_id)
+      """,
+      (depot_id, manifest_id),
     ).fetchall()
 
   if isinstance(created_at, int):
-    created_at = datetime.fromtimestamp(created_at, timezone.utc)
+    created_at = datetime.fromtimestamp(created_at, UTC)
   else:
     created_at = datetime.fromisoformat(created_at)
 
   if isinstance(seen_by_steamdb_at, int):
-    seen_by_steamdb_at = datetime.fromtimestamp(seen_by_steamdb_at, timezone.utc)
+    seen_by_steamdb_at = datetime.fromtimestamp(seen_by_steamdb_at, UTC)
   else:
     seen_by_steamdb_at = datetime.fromisoformat(seen_by_steamdb_at)
 
@@ -286,7 +300,7 @@ def export_single_manifest(
   output.write("\n")
   output.write("          Size Hash                                     Flags Name\n")
   output.write("-------------- ---------------------------------------- ----- ")
-  output.write("-" * max(20, max(len(path) for path, *_ in files)))
+  output.write("-" * max(20, max(len(path) for path, *_ in files)))  # noqa: PLW3301
   output.write("\n")
   for path, original_size, flags, hash_sha1, link_target in files:
     output.write(f"{original_size:14} {bytes.hex(hash_sha1):<40} {flags:5} {path}")
@@ -350,13 +364,13 @@ class MySteamClient(SteamClient):
   """
 
   _LOG = logging.getLogger("SteamClient")
-  credentials_db: Optional[sqlite3.Connection] = None
+  credentials_db: sqlite3.Connection | None = None
 
   def __init__(self) -> None:
     super().__init__()
     self.on(self.EVENT_NEW_LOGIN_KEY, self._handle_login_key_step2)
 
-  def set_credential_location(self, path: Union[str, os.PathLike[str]]) -> None:
+  def set_credential_location(self, path: str | os.PathLike[str]) -> None:
     super().set_credential_location(path)
     self.credential_location = path
     if self.credentials_db:
@@ -382,13 +396,13 @@ class MySteamClient(SteamClient):
   #   else:
   #     return None
 
-  def _get_key_file_path(self, username: str) -> Optional[str]:
+  def _get_key_file_path(self, username: str) -> str | None:
     raise NotImplementedError("{self.__name__} uses a database for storing login keys")
 
-  def _get_sentry_path(self, username: str) -> Optional[str]:
+  def _get_sentry_path(self, username: str) -> str | None:
     raise NotImplementedError("{self.__name__} uses a database for storing sentries")
 
-  def get_sentry(self, username: str) -> Optional[bytes]:
+  def get_sentry(self, username: str) -> bytes | None:
     if self.credentials_db:
       with self.credentials_db, contextlib.closing(self.credentials_db.cursor()) as db_cursor:
         db_cursor.execute(""" SELECT sentry FROM users WHERE username = ? LIMIT 1 """, (username,))
@@ -412,7 +426,7 @@ class MySteamClient(SteamClient):
         return True
     return False
 
-  def get_login_key(self, username: str) -> Optional[str]:
+  def get_login_key(self, username: str) -> str | None:
     if self.credentials_db:
       with self.credentials_db, contextlib.closing(self.credentials_db.cursor()) as db_cursor:
         db_cursor.execute(
@@ -465,9 +479,9 @@ class MySteamClient(SteamClient):
 
   def __exit__(
     self,
-    exc_type: Optional[Type[BaseException]],
-    exc_value: Optional[BaseException],
-    traceback: Optional[TracebackType],
+    exc_type: type[BaseException] | None,
+    exc_value: BaseException | None,
+    traceback: TracebackType | None,
   ) -> None:
     self.logout()
 

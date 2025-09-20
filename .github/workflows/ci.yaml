@@ -29,5 +29,6 @@ jobs:
             r1/${{ github.workflow }}/${{ runner.os }}/poetry/
 
       - run: poetry install --no-interaction
-      - run: pyright .
-      - run: yapf --diff --recursive .
+      - run: basedpyright
+      - run: ruff check
+      - run: ruff format --diff
