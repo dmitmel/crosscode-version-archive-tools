@@ -9,7 +9,7 @@ dynamic = ["dependencies"]
 
 [tool.poetry.dependencies]
 pyyaml = "^6.0.2"
-steam = {version = "^1.4.4", extras = ["client"]}
+steam = {git = "https://github.com/solsticegamestudios/steam.git", rev = "v2.0.0-alpha1", extras = ["client"]}
 mwclient = "^0.11.0"
 
 [tool.poetry.group.dev.dependencies]

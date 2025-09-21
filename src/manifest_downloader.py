@@ -6,19 +6,16 @@ gevent.monkey.patch_all()
 
 import argparse
 import contextlib
-import logging
 import os
 import sqlite3
 import sys
 from datetime import UTC, datetime
-from getpass import getpass
-from types import TracebackType
 from typing import IO, TypedDict, cast
 
 import yaml
-from steam.client import SteamClient
+from steam.client import EResult, SteamClient
 from steam.client.cdn import CDNClient, CDNDepotManifest
-from steam.enums.common import EResult
+from steam.webauth import WebAuth
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -48,6 +45,8 @@ class InputManifestsManifest(TypedDict):
 
 
 def main() -> None:
+  # logging.basicConfig(format="%(asctime)s | %(message)s", level=logging.DEBUG)
+
   parser = argparse.ArgumentParser()
   subparsers = parser.add_subparsers(required=True, metavar="COMMAND")
 
@@ -72,7 +71,7 @@ def main() -> None:
   args.func(args)
 
 
-def cmd_update_database(args: argparse.Namespace) -> None:
+def cmd_update_database(_args: argparse.Namespace) -> None:
   db_connection = connect_to_database()
   input_manifests_data = load_input_manifests()
 
@@ -93,17 +92,9 @@ def cmd_update_database(args: argparse.Namespace) -> None:
           input_manifest,
         ))
 
-  auth_secrets_dir = os.path.join(PROJECT_DIR, "data", "steam_auth")
-  auth_secrets_dir_mode = 0o700
+  username = cast(str, input_manifests_data.get("username"))
+  client = connect_to_steam(username)
   try:
-    os.mkdir(auth_secrets_dir, mode=auth_secrets_dir_mode)
-  except FileExistsError:
-    os.chmod(auth_secrets_dir, auth_secrets_dir_mode)
-  with MySteamClient() as client:
-    client.set_credential_location(auth_secrets_dir)
-    client.username = cast(str, input_manifests_data.get("username"))
-    client.my_fancy_login_routine()
-    print(f"Logged in as: {client.user.name if client.user is not None else None}")
     cdn_client = CDNClient(client)
 
     for idx, (app_id, depot_id, manifest_id, manifest_obj) in enumerate(each_and_every_manifest):
@@ -187,8 +178,11 @@ def cmd_update_database(args: argparse.Namespace) -> None:
             (depot_id, manifest_id, *row),
           )
 
+  finally:
+    client.logout()
 
-def cmd_open_steamdb_pages(args: argparse.Namespace) -> None:
+
+def cmd_open_steamdb_pages(_args: argparse.Namespace) -> None:
   import webbrowser
 
   input_manifests_data = load_input_manifests()
@@ -358,132 +352,80 @@ def connect_to_database() -> sqlite3.Connection:
   return db_connection
 
 
-class MySteamClient(SteamClient):
-  """
-  See also: <https://github.com/ValvePython/steamctl/blob/v0.9.0/steamctl/clients.py>
-  """
+def connect_to_steam(username: str) -> SteamClient:
+  token = do_steam_authenication(username)
 
-  _LOG = logging.getLogger("SteamClient")
-  credentials_db: sqlite3.Connection | None = None
+  client = SteamClient()
 
-  def __init__(self) -> None:
-    super().__init__()
-    self.on(self.EVENT_NEW_LOGIN_KEY, self._handle_login_key_step2)
+  ok = client.connect()
+  if not ok:
+    raise Exception("client.connect() failed")
 
-  def set_credential_location(self, path: str | os.PathLike[str]) -> None:
-    super().set_credential_location(path)
-    self.credential_location = path
-    if self.credentials_db:
-      self.credentials_db.close()
-    self.credentials_db = sqlite3.connect(
-      os.path.join(self.credential_location, "credentials.sqlite3")
-    )
-    self.credentials_db.row_factory = sqlite3.Row
-    with self.credentials_db, contextlib.closing(self.credentials_db.cursor()) as db_cursor:
-      db_cursor.executescript(
-        """
-        CREATE TABLE IF NOT EXISTS users (
-          username  TEXT NOT NULL PRIMARY KEY,
-          sentry    BLOB     NULL,
-          login_key TEXT     NULL
+  result = client.login(username=username, access_token=token)
+  if result != EResult.OK:
+    raise Exception(f"client.login() failed: {result}")
+
+  while not client.logged_on and not client.wait_event(
+    client.EVENT_LOGGED_ON, timeout=1, raises=False
+  ):
+    pass
+
+  print(f"Logged in as: {client.user.name if client.user is not None else None}")
+
+  return client
+
+
+def do_steam_authenication(username: str) -> str:
+  with (
+    connect_to_credentials_db() as credentials_db,
+    contextlib.closing(credentials_db.cursor()) as db_cursor,
+  ):
+    db_cursor.executescript(
+      """
+        CREATE TABLE IF NOT EXISTS webauth_users (
+          username      TEXT NOT NULL PRIMARY KEY,
+          refresh_token TEXT     NULL
         );
         """
+    )
+
+    db_cursor.execute(
+      """ SELECT refresh_token FROM webauth_users WHERE username = ? LIMIT 1 """, (username,)
+    )
+    result: sqlite3.Row = db_cursor.fetchone()
+    if result:
+      return result[0]
+
+    webauth = WebAuth(username)
+    webauth.cli_login(username)
+    token = webauth.refresh_token
+    assert token
+
+    try:
+      db_cursor.execute(
+        """ INSERT INTO webauth_users(username, refresh_token) VALUES (?, ?) """,
+        (username, token),
+      )
+    except sqlite3.IntegrityError:
+      db_cursor.execute(
+        """ UPDATE webauth_users SET refresh_token = ? WHERE username = ? """,
+        (token, username),
       )
 
-  # def _get_key_file_path(self, username: str) -> Optional[str]:
-  #   if self.credential_location:
-  #     return os.path.join(self.credential_location, f"{username}.key")
-  #   else:
-  #     return None
+    return token
 
-  def _get_key_file_path(self, username: str) -> str | None:
-    raise NotImplementedError("{self.__name__} uses a database for storing login keys")
 
-  def _get_sentry_path(self, username: str) -> str | None:
-    raise NotImplementedError("{self.__name__} uses a database for storing sentries")
+def connect_to_credentials_db() -> sqlite3.Connection:
+  secrets_dir = os.path.join(PROJECT_DIR, "data", "steam_auth")
+  secrets_dir_mode = 0o700
+  try:
+    os.mkdir(secrets_dir, mode=secrets_dir_mode)
+  except FileExistsError:
+    os.chmod(secrets_dir, secrets_dir_mode)
 
-  def get_sentry(self, username: str) -> bytes | None:
-    if self.credentials_db:
-      with self.credentials_db, contextlib.closing(self.credentials_db.cursor()) as db_cursor:
-        db_cursor.execute(""" SELECT sentry FROM users WHERE username = ? LIMIT 1 """, (username,))
-        result: sqlite3.Row = db_cursor.fetchone()
-        if result and result[0]:
-          assert isinstance(result[0], bytes)
-          return result[0]
-    return None
-
-  def store_sentry(self, username: str, sentry_bytes: bytes) -> bool:
-    if self.credentials_db:
-      with self.credentials_db, contextlib.closing(self.credentials_db.cursor()) as db_cursor:
-        try:
-          db_cursor.execute(
-            """ INSERT INTO users(username, sentry) VALUES (?, ?) """, (username, sentry_bytes)
-          )
-        except sqlite3.IntegrityError:
-          db_cursor.execute(
-            """ UPDATE users SET sentry = ? WHERE username = ? """, (sentry_bytes, username)
-          )
-        return True
-    return False
-
-  def get_login_key(self, username: str) -> str | None:
-    if self.credentials_db:
-      with self.credentials_db, contextlib.closing(self.credentials_db.cursor()) as db_cursor:
-        db_cursor.execute(
-          """ SELECT login_key FROM users WHERE username = ? LIMIT 1 """, (username,)
-        )
-        result: sqlite3.Row = db_cursor.fetchone()
-        if result and result[0]:
-          assert isinstance(result[0], str)
-          return result[0]
-    return None
-
-  def store_login_key(self, username: str, login_key: str) -> bool:
-    if self.credentials_db:
-      with self.credentials_db, contextlib.closing(self.credentials_db.cursor()) as db_cursor:
-        try:
-          db_cursor.execute(
-            """ INSERT INTO users(username, login_key) VALUES (?, ?) """, (username, login_key)
-          )
-        except sqlite3.IntegrityError:
-          db_cursor.execute(
-            """ UPDATE users SET login_key = ? WHERE username = ? """, (login_key, username)
-          )
-        return True
-    return False
-
-  def _handle_login_key_step2(self) -> None:
-    if self.username and self.login_key:
-      self.store_login_key(self.username, self.login_key)
-
-  def my_fancy_login_routine(self) -> bool:
-    """
-    See also: <https://github.com/ValvePython/steamctl/blob/v0.9.0/steamctl/clients.py#L42-L126>
-    """
-    result: EResult
-    if not self.username:
-      self.username = input("Username: ")
-    if not self.login_key:
-      self.login_key = self.get_login_key(self.username)
-    result = self.relogin()
-    if result != EResult.OK:
-      password = getpass("Password: ")
-      result = self.cli_login(self.username, password)
-      if result != EResult.OK:
-        print(f"Failed to log in. Error: {result!r}")
-        return False
-    return True
-
-  def __enter__(self) -> MySteamClient:
-    return self
-
-  def __exit__(
-    self,
-    exc_type: type[BaseException] | None,
-    exc_value: BaseException | None,
-    traceback: TracebackType | None,
-  ) -> None:
-    self.logout()
+  credentials_db = sqlite3.connect(os.path.join(secrets_dir, "credentials.sqlite3"))
+  credentials_db.row_factory = sqlite3.Row
+  return credentials_db
 
 
 if __name__ == "__main__":
