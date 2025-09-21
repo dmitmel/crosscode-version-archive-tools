@@ -7,19 +7,17 @@ jobs:
   check:
     name: Check
     runs-on: ubuntu-latest
-    env:
-      POETRY_VIRTUALENVS_CREATE: false
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v6
         with:
-          python-version: '^3.8'
+          python-version: "^3.13"
 
       - run: curl -sSL https://install.python-poetry.org | python3 - -y
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
           path: |
             ~/.cache/pypoetry
@@ -28,7 +26,7 @@ jobs:
           restore-keys: |
             r1/${{ github.workflow }}/${{ runner.os }}/poetry/
 
-      - run: poetry install --no-interaction
-      - run: basedpyright
-      - run: ruff check
-      - run: ruff format --diff
+      - run: poetry install --no-interaction --no-root
+      - run: poetry run basedpyright
+      - run: poetry run ruff check
+      - run: poetry run ruff format --diff
